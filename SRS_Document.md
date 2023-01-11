@@ -1,4 +1,4 @@
-# ECommercePortal
+# GoGrocers 
 
 ## Document:
 System Requirement Specification Document
