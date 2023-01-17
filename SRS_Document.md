@@ -43,10 +43,10 @@
 -Add other admins/users etc .
 
 ### Customers:
--i Through a web browser the customers can search for a Grocery and other products online by its name or 
-manufacturer later can add to the shopping cart.
--ii The user can login using his account details or new customers can set up account vey quickly
--iii They should give the details of their of full name,email account ,username and password.
+- i. Through a web browser the customers can search for a Grocery and other products online by its name or 
+     manufacturer later can add to the shopping cart.
+- ii. The user can login using his account details or new customers can set up account vey quickly
+- iii. They should give the details of their of full name,email account ,username and password.
 
 ### Users:
 -The users will be people who will use our product or our  online Grocery shopping system solution, sometimes on a daily basis.
