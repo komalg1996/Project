@@ -18,7 +18,7 @@
  and maintain various lists of shop category.
 
 ## Scope:
-- This system allows the customers to maintain their cart for adding product,removing a product from product catalog as per availablityof product.
+-This system allows the customers to maintain their cart for adding product,removing a product from product catalog as per availablityof product.
   Customer will be able cancel order,purchase a product.this system will ensure about the delivery of product at proper destination and will also
   will be able to manage payment system.Basically all the CRUD Operations will be carried out through the Workflow of online Grocery shopping system.
 
