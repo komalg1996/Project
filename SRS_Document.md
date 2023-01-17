@@ -1,46 +1,46 @@
 # GoGrocers 
 
 ## Document:
--System Requirement Specification Document
+- System Requirement Specification Document
 
 ## Title:
--System Reqruiement Spefication for Online Geocery Shopping Portal
+- System Reqruiement Spefication for Online Geocery Shopping Portal
 
 ## Team: 
--Direct Customer
--Indirect Customer
--Quality Assurance Team
--System Analyst
+- Direct Customer
+- Indirect Customer
+- Quality Assurance Team
+- System Analyst
 
 ## Objective(Purpose):
--online shops,customer to browse through the shop and purchase them  online using the internet without visiting
+- online shops,customer to browse through the shop and purchase them  online using the internet without visiting
  shop physically.The admon module will enable a system administrator to approve and reject requeste for new shop
  and maintain various lists of shop category.
 
 ## Scope:
--This system allows the customers to maintain their cart for adding product,removing a product from product catalog as per availablityof product.
+- This system allows the customers to maintain their cart for adding product,removing a product from product catalog as per availablityof product.
   Customer will be able cancel order,purchase a product.this system will ensure about the delivery of product at proper destination and will also
   will be able to manage payment system.Basically all the CRUD Operations will be carried out through the Workflow of online Grocery shopping system.
 
 ## Definations:
--SRS:System Requirement Specification Document
--OSS: Online Shopping System
--QA:  Quality Assurance
--Portal: Peronalized Online Web Application
--MIS: Management Information System
--CRM: Customer Relation Managment
--BI:  Business Intelligence
--GUI: Graphical User Interface
--DFD: Data flow Diagram
--CD: Class Diagram .
+- SRS:System Requirement Specification Document
+- OSS: Online Shopping System
+- QA:  Quality Assurance
+- Portal: Peronalized Online Web Application
+- MIS: Management Information System
+- CRM: Customer Relation Managment
+- BI:  Business Intelligence
+- GUI: Graphical User Interface
+- DFD: Data flow Diagram
+- CD: Class Diagram .
 
 ## Function Requirement:
 
 ### Administrator:
--Admin can delete or update grocery items .
--Admin can manage categories .
--Admin can process orders (approve/reject) .
--Add other admins/users etc .
+- Admin can delete or update grocery items .
+- Admin can manage categories .
+- Admin can process orders (approve/reject) .
+- Add other admins/users etc .
 
 ### Customers:
 - i. Through a web browser the customers can search for a Grocery and other products online by its name or 
