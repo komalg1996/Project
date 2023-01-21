@@ -1,64 +1,68 @@
-# GoGrocers 
+# GoGrocers - Online Grocery Shopping 
 
 ## Document:
 - System Requirement Specification Document
 
-## Title:
-- System Reqruiement Spefication for Online Geocery Shopping Portal
-
 ## Team: 
-- Direct Customer
-- Indirect Customer
-- Quality Assurance Team
-- System Analyst
+Komal Ghorpade (229039)
+Ashwini Palve (229013)
+
+## Description:
+The feature of online grocery shopping is by simply clicking the mouse button for the required items consumers purchase grocery produced through retailers and the subsequent delivery of those ordered groceries at home. Due to Covid-19 the online grocery market in India has attract lots of market segment hence grocery chains expanding to the digital platform.
 
 ## Objective(Purpose):
-- online shops,customer to browse through the shop and purchase them  online using the internet without visiting
- shop physically.The admon module will enable a system administrator to approve and reject requeste for new shop
- and maintain various lists of shop category.
+-To develope a web-based online grocery shop that alows users to, browse through the products and place their order using the internet without visiting shop physically. Once user has finalized the order she can add the item to the shopping cart. And on succesfully placing order doorstep delivery will be provided.
 
 ## Scope:
-- This system allows the customers to maintain their cart for adding product,removing a product from product catalog as per availablityof product.
-  Customer will be able cancel order,purchase a product.this system will ensure about the delivery of product at proper destination and will also
-  will be able to manage payment system.Basically all the CRUD Operations will be carried out through the Workflow of online Grocery shopping system.
+The system will include a user-facing website and a back-end administration panel for managing orders and Grocery  inventory along with delivery person.
+
+## Users of the system: 
+Customers, Staff , Admin and delivery person.
 
 ## Definations:
 - SRS:System Requirement Specification Document
 - OSS: Online Shopping System
-- QA:  Quality Assurance
 - Portal: Peronalized Online Web Application
-- MIS: Management Information System
-- CRM: Customer Relation Managment
-- BI:  Business Intelligence
 - GUI: Graphical User Interface
 - DFD: Data flow Diagram
-- CD: Class Diagram .
+- CD: Class Diagram 
 
-## Function Requirement:
-
-### Administrator:
-- Admin can delete or update grocery items .
-- Admin can manage categories .
-- Admin can process orders (approve/reject) .
-- Add other admins/users etc .
-
-### Customers:
-- i. Through a web browser the customers can search for a Grocery and other products online by its name or 
-     manufacturer later can add to the shopping cart.
-- ii. The user can login using his account details or new customers can set up account vey quickly
-- iii. They should give the details of their of full name,email account ,username and password.
-
-### Users:
--The users will be people who will use our product or our  online Grocery shopping system solution, sometimes on a daily basis.
+## Functional Requirements
+Any annonymous User will be able to view different products avaialble for sale. Any User will be able select product to view from categories avaialble.Employee will be to track and maintain stock of products available for sale. Employee will be able to raise reqests for product updatation to Admin.
+### Registration 
+-If customer wants to purchase any products, then he/she must be registerd. Unregistered user can only view the grocery portal. 
+### Login
+Customer logins to the system by entering valid user id and password for the orders. After login the system will allow customers to place orders and make payments online/offline.
+### For Admin 
+- Add product inventory
+- Manage price of products
+- Manage order and deliveries
+- Manage payments
+- Secure login to the admin dashboard
+- Manage delivery executives
+- Manage offers and discounts
+- Manage CMS
+- Manage Employees
+- View ratings and reviews
+- Generate reports
+### For Customer 
+- Register and manage profile
+- Add address
+- Browse and sort through products
+- Place an order
+- View ratings and reviews
+- View discounts and offer
+- Get order invoice via mail
+- Refer a friend
+- View order history
+- Select preferred delivery time
 
 ## Non-Functional Requirement:
-
 ### Security: 
 - Registered Users will be allowed access after authentication and verification of Username and Password. 
 - System will internally maintain secure communication between Servers(Web Servers,App Servers,Database Servers). 
 ### Reliability: 
-- The system will backup business data on regular basis and recover in less period of time to keep system operational. 
-- Continous updates are maintained , continous Administration is done to keep system operational. 
+-The system will backup business data on regular basis and recover in less period of time to keep system operational.Continous updates are maintained , continous Administration is done to keep system operational. 
 ### Availability:
 - The system will be available for 24*7 hours.  
 
@@ -69,7 +73,7 @@
 - PDA: Portable Device Application 
 - System will provide portable User Interface(HTML,CSS,JS) through users will be able access online PM System.  
 ### Accessibility: 
-- only registererd users will be able to able to see their Cart Details status after authentication. 
+- Only registererd users will be able to able to see their Cart Details status after authentication. 
 ### Durability: 
 - System will implement backup and recovery for users data and products data. 
 ### Efficiency : 
@@ -79,5 +83,5 @@
 ### Scalability: 
 - System will be able to provide consistent user experience. 
 ### Safety: 
-- online Grocery Shopping System "GoGrocers" will be  secure from malicious attack,Phishing and Hacking. 
+- Online Grocery Shopping System "GoGrocers" will be  secure from malicious attack,Phishing and Hacking. 
 - Role based security will be applied to Application data and Operation Accessibility. 
