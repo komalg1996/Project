@@ -11,7 +11,7 @@ Ashwini Palve (229013)
 The feature of online grocery shopping is by simply clicking the mouse button for the required items consumers purchase grocery produced through retailers and the subsequent delivery of those ordered groceries at home. Due to Covid-19 the online grocery market in India has attract lots of market segment hence grocery chains expanding to the digital platform.
 
 ## Objective(Purpose):
--To develope a web-based online grocery shop that alows users to, browse through the products and place their order using the internet without visiting shop physically. Once user has finalized the order she can add the item to the shopping cart. And on succesfully placing order doorstep delivery will be provided.
+To develope a web-based online grocery shop that alows users to, browse through the products and place their order using the internet without visiting shop physically. Once user has finalized the order she can add the item to the shopping cart. And on succesfully placing order doorstep delivery will be provided.
 
 ## Scope:
 The system will include a user-facing website and a back-end administration panel for managing orders and Grocery  inventory along with delivery person.
@@ -30,7 +30,7 @@ Customers, Staff , Admin and delivery person.
 ## Functional Requirements
 Any annonymous User will be able to view different products avaialble for sale. Any User will be able select product to view from categories avaialble.Employee will be to track and maintain stock of products available for sale. Employee will be able to raise reqests for product updatation to Admin.
 ### Registration 
--If customer wants to purchase any products, then he/she must be registerd. Unregistered user can only view the grocery portal. 
+If customer wants to purchase any products, then he/she must be registerd. Unregistered user can only view the grocery portal. 
 ### Login
 Customer logins to the system by entering valid user id and password for the orders. After login the system will allow customers to place orders and make payments online/offline.
 ### For Admin 
@@ -62,7 +62,7 @@ Customer logins to the system by entering valid user id and password for the ord
 - Registered Users will be allowed access after authentication and verification of Username and Password. 
 - System will internally maintain secure communication between Servers(Web Servers,App Servers,Database Servers). 
 ### Reliability: 
--The system will backup business data on regular basis and recover in less period of time to keep system operational.Continous updates are maintained , continous Administration is done to keep system operational. 
+The system will backup business data on regular basis and recover in less period of time to keep system operational.Continous updates are maintained , continous Administration is done to keep system operational. 
 ### Availability:
 - The system will be available for 24*7 hours.  
 
