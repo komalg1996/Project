@@ -1,7 +1,7 @@
 # GoGrocers - Online Grocery Shopping 
 
 ## Document:
-- System Requirement Specification Document
+System Requirement Specification Document for online grocery shopping
 
 ## Team: 
 Komal Ghorpade (229039)
@@ -16,8 +16,14 @@ To develope a web-based online grocery shop that alows users to, browse through 
 ## Scope:
 The system will include a user-facing website and a back-end administration panel for managing orders and Grocery  inventory along with delivery person.
 
-## Users of the system: 
-Customers, Staff , Admin and delivery person.
+## Entities: 
+- User(Admin,Employee,Customer), 
+- Product
+- Shopping cart
+- Order
+- Delivery
+- Payment
+
 
 ## Definations:
 - SRS:System Requirement Specification Document
