@@ -1,0 +1,5 @@
+package com.code.pojos;
+
+public class Category {
+
+}

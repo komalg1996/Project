@@ -1,0 +1,12 @@
+package com.code.pojos;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "orders_tbl")
+public class Order {
+//order_id,order_customer_id,order_type,total_price,payment_method,delivery_address,order_date,delivered_date
+	
+	private 
+}

@@ -1,0 +1,11 @@
+package com.code.pojos;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cart_items")
+public class CartItem extends BaseEntity{
+	
+	
+}

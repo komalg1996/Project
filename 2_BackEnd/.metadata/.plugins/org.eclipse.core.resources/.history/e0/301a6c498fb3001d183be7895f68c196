@@ -1,0 +1,19 @@
+package com.code.pojos;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "addresses")
+public class Address {
+	private String addressline1;
+	private String addressline2;
+	private String city;
+	private String pincode;
+	private String state;
+	private String country;
+	private User SelectedUser;
+
+
+
+}

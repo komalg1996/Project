@@ -1,0 +1,118 @@
+package com.code.pojos;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+@Entity
+@Table(name = "orders_tbl")
+public class Order extends BaseEntity{
+    //order_id,total_price,
+	//payment_method,delivery_address,order_date,delivered_date,status,order_customer_id,
+	
+	private double totalprice;
+	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+	private LocalDate orderDate;
+	@Enumerated(EnumType.STRING)
+	@Column(length = 25)
+	private OrderStatus orderstatus;
+	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+	private LocalDateTime statusUpdateTime;
+	@OneToOne
+	@JoinColumn(name = "delivery_address")
+	private Address deliveryAddress;
+	@ManyToOne
+	@JoinColumn(name = "customer_id",nullable = false)
+	private User customer;
+	private User employee;
+	
+	public Order() {
+		
+	}
+
+	public Order(double totalprice, LocalDate orderDate, OrderStatus orderstatus, LocalDateTime statusUpdateTime,
+			Address deliveryAddress, User customer, User employee) {
+		super();
+		this.totalprice = totalprice;
+		this.orderDate = orderDate;
+		this.orderstatus = orderstatus;
+		this.statusUpdateTime = statusUpdateTime;
+		this.deliveryAddress = deliveryAddress;
+		this.customer = customer;
+		this.employee = employee;
+	}
+
+	public double getTotalprice() {
+		return totalprice;
+	}
+
+	public void setTotalprice(double totalprice) {
+		this.totalprice = totalprice;
+	}
+
+	public LocalDate getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(LocalDate orderDate) {
+		this.orderDate = orderDate;
+	}
+
+	public OrderStatus getOrderstatus() {
+		return orderstatus;
+	}
+
+	public void setOrderstatus(OrderStatus orderstatus) {
+		this.orderstatus = orderstatus;
+	}
+
+	public LocalDateTime getStatusUpdateTime() {
+		return statusUpdateTime;
+	}
+
+	public void setStatusUpdateTime(LocalDateTime statusUpdateTime) {
+		this.statusUpdateTime = statusUpdateTime;
+	}
+
+	public Address getDeliveryAddress() {
+		return deliveryAddress;
+	}
+
+	public void setDeliveryAddress(Address deliveryAddress) {
+		this.deliveryAddress = deliveryAddress;
+	}
+
+	public User getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(User customer) {
+		this.customer = customer;
+	}
+
+	public User getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(User employee) {
+		this.employee = employee;
+	}
+
+	@Override
+	public String toString() {
+		return "Order [totalprice=" + totalprice + ", orderDate=" + orderDate + ", orderstatus=" + orderstatus
+				+ ", statusUpdateTime=" + statusUpdateTime + ", deliveryAddress=" + deliveryAddress + "]";
+	}
+	
+ 
+}

@@ -1,0 +1,22 @@
+package com.code.pojos;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "carts")
+public class ShoppingCart {
+	
+	@Column(name = "total_items")
+	private int totalItems;
+	@Column(name = "total_cart_price")
+	private double totalCartPrice;
+	@Column(name = "created_on")
+	private LocalDate createdOn;
+	@Column(name = "last_updated_on")
+	private LocalDate lastUpdatedOn;
+	
+}

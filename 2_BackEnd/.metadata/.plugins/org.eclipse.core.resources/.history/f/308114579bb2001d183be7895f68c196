@@ -1,0 +1,14 @@
+package com.code.pojos;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "categories")
+public class Category {
+	@Column(name = "category_name", length = 30)
+	private String categoryName;
+	@Column(length = 30)
+	private String description;
+}

@@ -1,0 +1,14 @@
+package com.code.pojos;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "orders_tbl")
+public class Order extends BaseEntity{
+    //order_id,total_price,
+	//payment_method,delivery_address,order_date,delivered_date,status,order_customer_id,
+	
+	private double price;
+	
+}

@@ -1,0 +1,24 @@
+package com.code.pojos;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cart_items")
+public class CartItem extends BaseEntity{
+	//quantity , totalPrice , cart , product
+	private int quantity;
+	private double totalPrice;
+	private ShoppingCart cart;
+	private Product product;
+	
+	
+	public CartItem() {
+		
+	}
+
+	
+	
+	
+}

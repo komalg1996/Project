@@ -1,0 +1,66 @@
+package com.code.pojos;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cart_items")
+public class CartItem extends BaseEntity{
+	//quantity , totalPrice , cart , product
+	private int quantity;
+	private double totaPrice;
+	private ShoppingCart cart;
+	private Product product;
+	
+	public CartItem() {
+		
+	}
+
+	public CartItem(int quantity, double totaPrice, ShoppingCart cart, Product product) {
+		super();
+		this.quantity = quantity;
+		this.totaPrice = totaPrice;
+		this.cart = cart;
+		this.product = product;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public double getTotaPrice() {
+		return totaPrice;
+	}
+
+	public void setTotaPrice(double totaPrice) {
+		this.totaPrice = totaPrice;
+	}
+
+	public ShoppingCart getCart() {
+		return cart;
+	}
+
+	public void setCart(ShoppingCart cart) {
+		this.cart = cart;
+	}
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
+	@Override
+	public String toString() {
+		return "CartItem [quantity=" + quantity + ", totaPrice=" + totaPrice + ", cart=" + cart + ", product=" + product
+				+ "]";
+	}
+	
+	
+}
