@@ -1,5 +1,5 @@
 package com.code.pojos;
 
 public enum PaymentMethod {
-	CARD,CASHONDELIVERY
+	CARD,CASHONDELIVERY,UPI,NETBANKING
 }
