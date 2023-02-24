@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "order_details")
-public class OrderDetails {
+public class OrderDetails extends BaseEntity{
 	private double price;
 	private int quantity;
 	@ManyToOne
