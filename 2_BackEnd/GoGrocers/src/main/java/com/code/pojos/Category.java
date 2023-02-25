@@ -51,7 +51,15 @@ public class Category extends BaseEntity {
 	public String toString() {
 		return "Category=Id"+getId()+" [categoryName=" + categoryName + ", description=" + description + "]";
 	}
-	
+	//helper method
+	public void addProducts(Product p) {
+		products.add(p);
+		p.setProductCategory(this);
+	}
+	public void removeProduct(Product p) {
+		products.remove(p);
+		p.setProductCategory(null);
+	}
 	
 	
 	

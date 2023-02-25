@@ -9,6 +9,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "products")
 public class Product extends BaseEntity{
@@ -23,24 +25,35 @@ public class Product extends BaseEntity{
 	private LocalDate expDate;
 	@ManyToOne
 	@JoinColumn(name="category_id",nullable = false) //to specify foreign key colm name
+	@JsonIgnoreProperties("products")
 	private Category productCategory;
 	public Product() {
 		
 	}
 
-	public Product(String productName, String description, boolean instock, double price, LocalDate expDate) {
+	public Product(String productName, String description, boolean instock, double price, LocalDate expDate, Category productCategory) {
 		super();
 		this.productName = productName;
 		this.description = description;
 		this.instock = instock;
 		this.price = price;
 		this.expDate = expDate;
+		this.productCategory = productCategory;
 	}
 
 	@Override
 	public String toString() {
 		return "Product Id="+getId()+"[productName=" + productName + ", description=" + description + ", instock=" + instock
 				+ ", price=" + price + ", expDate=" + expDate + "]";
+	}
+
+	
+	public Category getProductCategory() {
+		return productCategory;
+	}
+
+	public void setProductCategory(Category productCategory) {
+		this.productCategory = productCategory;
 	}
 
 	public String getProductName() {
