@@ -1,6 +1,5 @@
 package com.code.pojos;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
@@ -16,75 +15,77 @@ import javax.persistence.Table;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name = "orders_tbl")
-public class Order extends BaseEntity{
-    //order_id,total_price,
-	//payment_method,delivery_address,order_date,delivered_date,status,order_customer_id,
-	
-	private double totalprice;
+@Table(name = "orders")
+public class Order extends BaseEntity {
+	private double totalPrice;
+
 	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
-	private LocalDate orderDate;
+	private LocalDateTime orderDate;
+
 	@Enumerated(EnumType.STRING)
 	@Column(length = 25)
-	private OrderStatus orderstatus;
+	private OrderStatus orderStatus;
+
 	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
-	private LocalDateTime statusUpdateTime;
+	private LocalDateTime statusUdpateTime;
+
 	@OneToOne
-	@JoinColumn(name = "delivery_address")
+	@JoinColumn(name = "delivery_address_id")
 	private Address deliveryAddress;
+
 	@ManyToOne
-	@JoinColumn(name = "customer_id",nullable = false)
+	@JoinColumn(name = "customer_id", nullable = false)
 	private User customer;
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "employee_id")
 	private User employee;
-	
+
 	public Order() {
-		
 	}
 
-	public Order(double totalprice, LocalDate orderDate, OrderStatus orderstatus, LocalDateTime statusUpdateTime,
+	public Order(double totalPrice, LocalDateTime orderDate, OrderStatus orderStatus, LocalDateTime statusUdpateTime,
 			Address deliveryAddress, User customer, User employee) {
 		super();
-		this.totalprice = totalprice;
+		this.totalPrice = totalPrice;
 		this.orderDate = orderDate;
-		this.orderstatus = orderstatus;
-		this.statusUpdateTime = statusUpdateTime;
+		this.orderStatus = orderStatus;
+		this.statusUdpateTime = statusUdpateTime;
 		this.deliveryAddress = deliveryAddress;
 		this.customer = customer;
 		this.employee = employee;
 	}
 
-	public double getTotalprice() {
-		return totalprice;
+	public double getTotalPrice() {
+		return totalPrice;
 	}
 
-	public void setTotalprice(double totalprice) {
-		this.totalprice = totalprice;
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
 	}
 
-	public LocalDate getOrderDate() {
+	public LocalDateTime getOrderDate() {
 		return orderDate;
 	}
 
-	public void setOrderDate(LocalDate orderDate) {
+	public void setOrderDate(LocalDateTime orderDate) {
 		this.orderDate = orderDate;
 	}
 
-	public OrderStatus getOrderstatus() {
-		return orderstatus;
+	public OrderStatus getOrderStatus() {
+		return orderStatus;
 	}
 
-	public void setOrderstatus(OrderStatus orderstatus) {
-		this.orderstatus = orderstatus;
+	public void setOrderStatus(OrderStatus orderStatus) {
+		this.orderStatus = orderStatus;
 	}
 
-	public LocalDateTime getStatusUpdateTime() {
-		return statusUpdateTime;
+	public LocalDateTime getStatusUdpateTime() {
+		return statusUdpateTime;
 	}
 
-	public void setStatusUpdateTime(LocalDateTime statusUpdateTime) {
-		this.statusUpdateTime = statusUpdateTime;
+	public void setStatusUdpateTime(LocalDateTime statusUdpateTime) {
+		this.statusUdpateTime = statusUdpateTime;
 	}
 
 	public Address getDeliveryAddress() {
@@ -113,9 +114,7 @@ public class Order extends BaseEntity{
 
 	@Override
 	public String toString() {
-		return "Order [totalprice=" + totalprice + ", orderDate=" + orderDate + ", orderstatus=" + orderstatus
-				+ ", statusUpdateTime=" + statusUpdateTime + ", deliveryAddress=" + deliveryAddress + "]";
+		return "Order Id" + getId() + " [totalPrice=" + totalPrice + ", orderDate=" + orderDate + ", orderStatus="
+				+ orderStatus + ", statusUdpateTime=" + statusUdpateTime + ", deliveryAddress=" + deliveryAddress + "]";
 	}
-	
- 
 }

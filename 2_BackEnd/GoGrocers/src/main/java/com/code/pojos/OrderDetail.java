@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "order_details")
-public class OrderDetails extends BaseEntity{
+public class OrderDetail extends BaseEntity{
 	private double price;
 	private int quantity;
 	@ManyToOne
@@ -17,11 +17,11 @@ public class OrderDetails extends BaseEntity{
 	@JoinColumn(name = "product_id", nullable = false)
 	private Product selectedProduct;
 	
-	public OrderDetails() {
+	public OrderDetail() {
 
 	}
 
-	public OrderDetails(double price, int quantity, Order currentOrder, Product selectedProduct) {
+	public OrderDetail(double price, int quantity, Order currentOrder, Product selectedProduct) {
 		super();
 		this.price = price;
 		this.quantity = quantity;

@@ -2,40 +2,47 @@ package com.code.pojos;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Users_table")
 public class User extends BaseEntity {
-	@Column(name = "first_name", length = 20)
+	@Column(length = 20)
 	private String firstName;
-	@Column(name = "last_name", length = 20)
+	@Column(length = 20)
 	private String lastName;
 	@Column(length = 25, unique = true) // unique constraint
 	private String email;
-	@Column(length = 25, nullable = false)
+	@Column(nullable = false)
 	private String password; // not null constraint
-	@Column(name="user_role", length = 10)
+	@Column(length = 20)
+	private String phone;
+	@Enumerated(EnumType.STRING)
+	@Column(length = 20)
 	private Role userRole;
 
-	//default ctr
+	// default ctr
 	public User() {
-
+		this.firstName = "Komal";
 	}
-	//parametrised ctr
-	public User(String firstName, String lastName, String email, String password, Role userRole) {
+
+	// parametrised ctr
+	public User(String firstName, String lastName, String email, String password, String phone, Role userRole) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
+		this.phone = phone;
 		this.userRole = userRole;
 	}
 
 	@Override
 	public String toString() {
-		return "User Id=" + getId() + "[firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", password=" + password + ", userRole=" + userRole + "]";
+		return "User [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", password=" + password
+				+ ", phone=" + phone + ", userRole=" + userRole + "]";
 	}
 
 	public String getFirstName() {
@@ -68,6 +75,14 @@ public class User extends BaseEntity {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
 	public Role getuserRole() {
