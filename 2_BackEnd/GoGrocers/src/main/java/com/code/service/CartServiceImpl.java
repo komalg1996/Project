@@ -36,9 +36,9 @@ public class CartServiceImpl implements CartService {
 		Product product = prodRepo.findById(productId).get();
 		Stock stock = stockRepo.findById(productId).get();
 		if (stock.getQuantity() < quntity)
-			return "We Only Have" + stock.getQuantity() + " " + stock.getUnit() + "(s) of" + product.getProductName() + " .";
+			return "We Only Have" + stock.getQuantity() + " " + stock.getUnit() + "(s) of" + product.getName() + " .";
 		cartRepo.save(new Cart(quntity, product, customer));
-		return quntity + product.getProductName() + " added to cart";
+		return quntity + product.getName() + " added to cart";
 	}
 
 	@Override

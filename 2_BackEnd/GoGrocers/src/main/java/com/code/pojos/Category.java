@@ -13,62 +13,38 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "categories")
 public class Category extends BaseEntity {
-	@Column(name = "category_name", length = 30)
-	private String categoryName;
-	@Column(length = 100)
-	private String description;
+	@Column(length = 30)
+	private String name;
+
 	@Column(length = 30)
 	@Enumerated(EnumType.STRING)
 	private Status status;
-	@OneToMany(mappedBy = "productCategory", cascade = CascadeType.ALL, orphanRemoval = true)	//one category many products
-	private List<Product> products =new ArrayList<>();
-	
+
+	@JsonIgnoreProperties("selectedcategory")
+	@OneToMany(mappedBy = "selectedcategory", cascade = { CascadeType.MERGE, CascadeType.REMOVE }, orphanRemoval = true)
+	private List<Product> products = new ArrayList<>();
+
 	public Category() {
-		
 	}
 
 	public Category(String name, Status status) {
 		super();
-		this.categoryName = categoryName;
+		this.name = name;
 		this.status = status;
 	}
 
-	public Category(String categoryName, String description) {
-		super();
-		this.categoryName = categoryName;
-		this.description = description;
-	}
-	
-	@JsonIgnore
-	public List<Product> getProducts() {
-		return products;
+	public String getName() {
+		return name;
 	}
 
-	public void setProducts(List<Product> products) {
-		this.products = products;
+	public void setName(String name) {
+		this.name = name;
 	}
-
-	public String getCategoryName() {
-		return categoryName;
-	}
-
-	public void setCategoryName(String categoryName) {
-		this.categoryName = categoryName;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	
 
 	public Status getStatus() {
 		return status;
@@ -78,20 +54,29 @@ public class Category extends BaseEntity {
 		this.status = status;
 	}
 
-	@Override
-	public String toString() {
-		return "Category=Id"+getId()+" [categoryName=" + categoryName + ", description=" + description +  ", status=" + status +"]";
+	@JsonIgnore
+	public List<Product> getProducts() {
+		return products;
 	}
-	//helper method
-	public void addProducts(Product p) {
+
+	public void setProducts(List<Product> products) {
+		this.products = products;
+	}
+
+	// helper method to add product
+	public void addProduct(Product p) {
 		products.add(p);
 		p.setSelectedcategory(this);
 	}
+
+	// helper method to remove product
 	public void removeProduct(Product p) {
 		products.remove(p);
 		p.setSelectedcategory(null);
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Category ID " + getId() + " [name=" + name + ", status=" + status + "]";
+	}
 }

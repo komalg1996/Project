@@ -13,6 +13,7 @@ import org.springframework.test.annotation.Rollback;
 
 import com.code.dao.CategoryRepository;
 import com.code.pojos.Category;
+import com.code.pojos.Status;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace=Replace.NONE)
@@ -27,7 +28,7 @@ class TestCategory {
 	@Test
 	void categoryTest() {
 		
-		List<Category> category =List.of(new Category("Grains", "Nutritious"),new Category("Juice", "Refreshing"));
+		List<Category> category =List.of(new Category("Grains", Status.ACTIVE),new Category("Biscuit", Status.ACTIVE));
 		
 		crepo.saveAll(category);
 	}

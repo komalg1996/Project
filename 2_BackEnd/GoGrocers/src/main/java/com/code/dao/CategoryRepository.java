@@ -9,6 +9,6 @@ import com.code.pojos.Category;
 
 public interface CategoryRepository extends JpaRepository<Category, Long>{
 	
-	Optional<Category> findBycategoryName(String category);
+	Optional<Category> findByName(String category);
 	
 }

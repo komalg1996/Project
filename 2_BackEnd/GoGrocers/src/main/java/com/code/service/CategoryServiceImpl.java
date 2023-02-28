@@ -35,7 +35,7 @@ public class CategoryServiceImpl implements CategoryService{
 	@Override
 	public String deleteCategoryById(Long id) {
 		Category categoryToDelete = crepo.findById(id).get();
-		String catName = categoryToDelete.getCategoryName();
+		String catName = categoryToDelete.getName();
 		categoryToDelete.getProducts().forEach(product -> {
 			prepo.deleteProduct(product.getId());
 		});
@@ -44,7 +44,7 @@ public class CategoryServiceImpl implements CategoryService{
 
 	@Override
 	public Category findByName(String categoryName) {
-		return crepo.findBycategoryName(categoryName)
+		return crepo.findByName(categoryName)
 				.orElseThrow(() -> new CategoryNotFoundException("No such Category available"));
 	}
 	

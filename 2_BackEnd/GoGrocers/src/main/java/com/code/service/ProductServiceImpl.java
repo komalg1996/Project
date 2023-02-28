@@ -30,7 +30,7 @@ public class ProductServiceImpl implements ProductService {
 	public String addProduct(ProductDto input) {
 		
 		// find category by name
-				Optional<Category> cat = crepo.findBycategoryName(input.getCategory());
+				Optional<Category> cat = crepo.findByName(input.getCategory());
 				Category currentCat = null;
 				// Category present then get persistent pojo
 				if (cat.isPresent())
@@ -41,14 +41,14 @@ public class ProductServiceImpl implements ProductService {
 				}
 				// extract product details
 				Product product = input.getProduct();
-				currentCat.addProducts(product);// helper method in category pojo,
+				currentCat.addProduct(product);;// helper method in category pojo,
 				// Link the category pojo with product pojo by adding it into categories product
 				// Extract stock from input
 				Stock stock = input.getStock();
 				// link the product with the stock pojo
 				stock.setCurrentProduct(product);
 				srepo.save(stock);
-				return product.getProductName() + "Added Successfully";
+				return product.getName() + "Added Successfully";
 	}
 	@Override
 	public List<Product> getProductsByCategory(Long id) {
@@ -60,18 +60,19 @@ public class ProductServiceImpl implements ProductService {
 		// extract product from productDTO
 		Product product = input.getProduct();
 		// extract category from name
-		Category cat = crepo.findBycategoryName(input.getCategory()).get();
+		Category cat = crepo.findByName(input.getCategory()).get();
 		// set the extracted category into product
-		product.setProductCategory(cat);
+		product.setSelectedcategory(cat);
 		Product updateProduct = prepo.save(product);
 		// save stock
 		Stock stock = srepo.save(input.getStock());
-		return new ProductDto(updateProduct, cat.getCategoryName(), stock);
+		return new ProductDto(updateProduct, cat.getName()
+				, stock);
 	}
 	
 	@Override
 	public List<ProductDto> getStockReportByCategory(String category) {
-		Category currentCat = crepo.findBycategoryName(category).get();
+		Category currentCat = crepo.findByName(category).get();
 		List<Product> products = prepo.getProductByCategory(currentCat.getId());
 		List<ProductDto> product_details = new ArrayList<>();
 		products.forEach(product -> {
@@ -81,7 +82,7 @@ public class ProductServiceImpl implements ProductService {
 	}
 	@Override
 	public String deleteProduct(Long id) {
-		String productName = prepo.findById(id).get().getProductName();
+		String productName = prepo.findById(id).get().getName();
 		srepo.deleteById(id);
 		prepo.deleteById(id);
 		return productName + "Deleted Successfully";
@@ -89,7 +90,7 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public ProductDto getProductDetail(Long id) {
 		Stock stock = srepo.findById(id).get();
-		return new ProductDto(stock.getCurrentProduct(), stock.getCurrentProduct().getProductCategory().getCategoryName(),
+		return new ProductDto(stock.getCurrentProduct(), stock.getCurrentProduct().getSelectedcategory().getName(),
 				stock);
 	}
 	
