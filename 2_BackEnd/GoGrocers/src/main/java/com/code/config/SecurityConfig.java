@@ -14,7 +14,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-
 import com.code.filter.JwtFilter;
 
 @EnableWebSecurity // mandatory
@@ -24,6 +23,7 @@ public class SecurityConfig {
 
 	@Autowired
 	private JwtFilter filter;
+	
 
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
