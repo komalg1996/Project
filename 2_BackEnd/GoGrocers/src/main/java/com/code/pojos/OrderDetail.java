@@ -5,20 +5,23 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "order_details")
-public class OrderDetail extends BaseEntity{
+public class OrderDetail extends BaseEntity {
 	private double price;
 	private int quantity;
+
 	@ManyToOne
 	@JoinColumn(name = "order_id", nullable = false)
 	private Order currentOrder;
+
 	@ManyToOne
 	@JoinColumn(name = "product_id", nullable = false)
 	private Product selectedProduct;
-	
-	public OrderDetail() {
 
+	public OrderDetail() {
 	}
 
 	public OrderDetail(double price, int quantity, Order currentOrder, Product selectedProduct) {
@@ -45,6 +48,7 @@ public class OrderDetail extends BaseEntity{
 		this.quantity = quantity;
 	}
 
+	@JsonIgnore
 	public Order getCurrentOrder() {
 		return currentOrder;
 	}
@@ -63,7 +67,7 @@ public class OrderDetail extends BaseEntity{
 
 	@Override
 	public String toString() {
-		return "OrderDetails [price=" + price + ", quantity=" + quantity + "]";
+		return "OrderDetail [ID=" + getId() + ",price=" + price + ", quantity=" + quantity + "]";
 	}
-	
+
 }

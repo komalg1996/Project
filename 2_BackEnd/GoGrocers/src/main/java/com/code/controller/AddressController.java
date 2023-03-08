@@ -16,52 +16,47 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.code.custome_exeception.UserNotFoundException;
 import com.code.dto.ResponseDto;
 import com.code.pojos.Address;
-import com.code.service.AddressService;
-import com.code.service.UserService;
+import com.code.service.IAddressService;
+import com.code.service.IUserService;
+
+
 
 @RestController
 @RequestMapping("/address")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin
 public class AddressController {
-
+	
 	@Autowired
-	private AddressService addrService;
-
+	private IAddressService addrService;
+	
 	@Autowired
-	private UserService userService;
-
+	private IUserService userService;
+	
 	@GetMapping("/all")
-	public ResponseEntity<?> getAllAddresses() {
-		Long UserID = Long.parseLong(SecurityContextHolder.getContext().getAuthentication().getName());
-		return new ResponseEntity<>(
-				new ResponseDto<List<Address>>("success", addrService.GetAllAddressessByUserId(UserID)), HttpStatus.OK);
+	public ResponseEntity<?> getAllAddresses(){
+		Integer userId =Integer.parseInt(SecurityContextHolder.getContext().getAuthentication().getName());
+		return new ResponseEntity<>(new ResponseDto<List<Address>>("success", addrService.getAllAddressesByUserId(userId)), HttpStatus.OK);
 	}
-
+	
 	@PostMapping("/add")
-	public ResponseEntity<?> addNewAddress(@RequestBody Address addr) throws UserNotFoundException {
-		Long UserID = Long.parseLong(SecurityContextHolder.getContext().getAuthentication().getName());
-		System.out.println(SecurityContextHolder.getContext().getAuthentication().getName());
-		addr.setSelectedUser(userService.findById(UserID));
-		return new ResponseEntity<>(new ResponseDto<Address>("success", addrService.AddOrEditAddress(addr)),
-				HttpStatus.CREATED);
+	public ResponseEntity<?> addNewAddress(@RequestBody Address addr){
+		Integer userId =Integer.parseInt(SecurityContextHolder.getContext().getAuthentication().getName());
+		addr.setSelectedUser(userService.findById(userId));
+		return new ResponseEntity<>(new ResponseDto<Address>("success", addrService.addOrEditAddress(addr)),HttpStatus.CREATED);
 	}
-
+	
 	@PutMapping("/edit/{addrId}")
-	public ResponseEntity<?> editAddressById(@RequestBody Address addr, @PathVariable Long addrId)
-			throws UserNotFoundException {
-		Long userId = Long.parseLong(SecurityContextHolder.getContext().getAuthentication().getName());
+	public ResponseEntity<?> editAddressById(@RequestBody Address addr,@PathVariable Integer addrId){
+		Integer userId =Integer.parseInt(SecurityContextHolder.getContext().getAuthentication().getName());
 		addr.setSelectedUser(userService.findById(userId));
 		addr.setId(addrId);
-		return new ResponseEntity<>(new ResponseDto<Address>("success", addrService.AddOrEditAddress(addr)),
-				HttpStatus.OK);
+		return new ResponseEntity<>(new ResponseDto<Address>("success", addrService.addOrEditAddress(addr)),HttpStatus.OK);
 	}
-
+	
 	@DeleteMapping("/delete/{addrId}")
-	public ResponseEntity<?> deleteAddressById(@PathVariable Long addrId) {
-		return new ResponseEntity<>(new ResponseDto<String>("success", addrService.DeleteAddressById(addrId)),
-				HttpStatus.OK);
+	public ResponseEntity<?> deleteAddressById(@PathVariable Integer addrId){
+		return new ResponseEntity<>(new ResponseDto<String>("success", addrService.deleteAddressById(addrId)),HttpStatus.OK);
 	}
 }

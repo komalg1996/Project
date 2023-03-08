@@ -8,10 +8,12 @@ import org.springframework.data.repository.query.Param;
 
 import com.code.pojos.Order;
 
-public interface OrderRepository extends JpaRepository<Order, Long>{
-	@Query("Select o from Order o where o.customer.id=:id order by o.statusUdpateTime desc")
-	List<Order> findAllOrdersByUserId(@Param("id") Long userId);
+public interface OrderRepository extends JpaRepository<Order, Integer>{
+
+	@Query("Select o from Order o where o.customer.id=:id order by o.statusUpdateDate desc")
+	List<Order> findAllOrdersByUserId(@Param("id") Integer userId);
 
 	@Query("Select o from Order o where o.employee.id=:id")
-	List<Order> findAllOrdersByEmployeeId(@Param("id") Long userId);
+	List<Order> findAllOrdersByEmployeeId(@Param("id")Integer userId);
+
 }

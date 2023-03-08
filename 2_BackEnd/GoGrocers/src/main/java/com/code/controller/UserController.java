@@ -1,10 +1,7 @@
 package com.code.controller;
 
 import java.util.List;
-import java.util.logging.LogManager;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,97 +19,88 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.code.custome_exeception.UserNotFoundException;
 import com.code.dto.LoginRequest;
 import com.code.dto.LoginResponse;
 import com.code.dto.ResponseDto;
 import com.code.pojos.User;
-import com.code.service.UserService;
+import com.code.service.IUserService;
 import com.code.util.JwtUtil;
+
 
 @RestController
 @RequestMapping("/user")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin
 public class UserController {
-	@Autowired
-	private PasswordEncoder encoder;
-	@Autowired
-	private UserService userService;
-	@Autowired
-	private AuthenticationManager authenticationManager;
 	@Autowired
 	private JwtUtil jwtUtil;
 
+	@Autowired
+	private PasswordEncoder encoder;
+
+	@Autowired
+	private IUserService userService;
+
+	@Autowired
+	private AuthenticationManager authenticationManager;
+
 	public UserController() {
-		System.out.println("-----ctor " + getClass().getName() + "----------");
+		System.out.println("---- CTOR: " + getClass().getName() + " --------");
 	}
 
-	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
-
-	
 	@PostMapping("/register")
 	public ResponseEntity<?> registerUser(@RequestBody User user) {
-		System.out.println("in create new user" + user);
-		logger.info("I have called register Api");
+		System.out.println("in create new User" + user);
 		user.setPassword(encoder.encode(user.getPassword()));
-		System.out.println(user.getPassword());
 		return new ResponseEntity<>(new ResponseDto<User>("success", userService.registerOrEditUser(user)),
 				HttpStatus.CREATED);
 	}
 
-	@PostMapping("/signin")
+	@PostMapping("/login")
 	public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest request) {
-		System.out.println("in auth " + request);
+		System.out.println("in authenticate user" + request);
 		try {
-			// Tries to authenticate the passed Authentication object, returning a fully
-			// populated Authentication object (including granted authorities)if successful.
-			Authentication authenticate = authenticationManager.authenticate
-			// An o.s.s.c.Authentication i/f implementation used for simple presentation of
-			// a username and password.
-			// Actual dao based authentication takes place here internally(first email :
-			// here replaced username by email for authentication
+			// authenticating the user
+			Authentication authenticate = authenticationManager
+					.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
+			System.out.println("\n------ Authenticated userDetails:" + authenticate + " -------\n");
 
-			// n then pwd n then authorities gets validated)
-			(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
-			// => successful authentication : create JWT n send it to the clnt in the
-			// response.
-			System.out.println("auth success " + authenticate);
-			User user = userService.findByEmail(request.getEmail());
-			return ResponseEntity.ok(new LoginResponse("Success", user, jwtUtil.generateJwtToken(authenticate)));
 		} catch (Exception e) {
-			e.printStackTrace();
-			throw new RuntimeException("User authentication Failed", e);
+			throw new UserNotFoundException("Invalid username or password");
 		}
+		User user = userService.findByEmail(request.getEmail());
+		System.out.println(jwtUtil.generateToken(user.getId()));
+		return new ResponseEntity<>(new LoginResponse("success", user, jwtUtil.generateToken(user.getId())),
+				HttpStatus.OK);
 	}
 
 	@PutMapping("/edit/{uid}")
-	public ResponseEntity<?> editUser(@RequestBody User user, @PathVariable long uid) {
+	public ResponseEntity<?> editUser(@RequestBody User user, @PathVariable int uid) {
 		user.setId(uid);
-		user.setPassword(encoder.encode(user.getPassword()));
 		return new ResponseEntity<>(new ResponseDto<User>("success", userService.registerOrEditUser(user)),
-				HttpStatus.OK);
+				HttpStatus.ACCEPTED);
 	}
 
 	@GetMapping("/customers")
 	public ResponseEntity<?> getAllCustomers() {
-		//return new ResponseEntity<>(new ResponseDto<List<User>>("Success", userService.getUsersByRole("CUSTOMER")),HttpStatus.OK);
-		return new ResponseEntity<>(new ResponseDto<List<User>>("Success", userService.getUsersByRole("CUSTOMER")),HttpStatus.OK);
+		return new ResponseEntity<>(new ResponseDto<List<User>>("success", userService.getUsersByRole("CUSTOMER")),
+				HttpStatus.OK);
 	}
 
 	@GetMapping("/employees")
 	public ResponseEntity<?> getAllEmployees() {
-		return new ResponseEntity<>(new ResponseDto<List<User>>("Success", userService.getUsersByRole("EMPLOYEE")),
+		return new ResponseEntity<>(new ResponseDto<List<User>>("success", userService.getUsersByRole("EMPLOYEE")),
 				HttpStatus.OK);
 	}
 
-	@GetMapping("/delivery_person")
-	public ResponseEntity<?> getAllDeliveryPerson() {
+	@GetMapping("/delivery_persons")
+	public ResponseEntity<?> getAllDeliverers() {
 		return new ResponseEntity<>(
-				new ResponseDto<List<User>>("Success", userService.getUsersByRole("DELIVERY_PERSON")), HttpStatus.OK);
+				new ResponseDto<List<User>>("success", userService.getUsersByRole("DELIVERY_PERSON")), HttpStatus.OK);
 	}
 
 	@DeleteMapping("/delete/{uid}")
-	public ResponseEntity<?> deleteById(@PathVariable long uid) {
-		return new ResponseEntity<>(new ResponseDto<String>("Success", userService.deleteUserById(uid)), HttpStatus.OK);
+	public ResponseEntity<?> deleteUserById(@PathVariable Integer uid) {
+		return new ResponseEntity<>(new ResponseDto<String>("success", userService.deleteUserById(uid)), HttpStatus.OK);
 	}
 }
-

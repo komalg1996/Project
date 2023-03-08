@@ -7,6 +7,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -15,28 +16,25 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Product extends BaseEntity {
 	@Column(length = 30)
 	private String name;
-
 	@Column(length = 100)
 	private String description;
+	private double price;
 
-	private long price;
-
-	@Column(length = 30)
+	@Column(length = 40)
 	private String imageName;
 
-	@Column(length = 30)
 	@Enumerated(EnumType.STRING)
+	@Column(length = 30)
 	private Status status;
-
 	@ManyToOne
 	@JoinColumn(name = "category_id", nullable = false)
 	@JsonIgnoreProperties("products")
-	private Category selectedcategory;
+	private Category selectedCategory;
 
 	public Product() {
 	}
 
-	public Product(String name, String description, long price, Status status) {
+	public Product(String name, String description, double price, Status status) {
 		super();
 		this.name = name;
 		this.description = description;
@@ -60,20 +58,12 @@ public class Product extends BaseEntity {
 		this.description = description;
 	}
 
-	public long getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(long price) {
+	public void setPrice(double price) {
 		this.price = price;
-	}
-
-	public String getImageName() {
-		return imageName;
-	}
-
-	public void setImageName(String imageName) {
-		this.imageName = imageName;
 	}
 
 	public Status getStatus() {
@@ -85,17 +75,25 @@ public class Product extends BaseEntity {
 	}
 
 	@JsonIgnore
-	public Category getSelectedcategory() {
-		return selectedcategory;
+	public Category getSelectedCategory() {
+		return selectedCategory;
 	}
 
-	public void setSelectedcategory(Category selectedcategory) {
-		this.selectedcategory = selectedcategory;
+	public void setSelectedCategory(Category selectedCategory) {
+		this.selectedCategory = selectedCategory;
+	}
+
+	public String getImageName() {
+		return imageName;
+	}
+
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
 	}
 
 	@Override
 	public String toString() {
-		return "Product Id" + getId() + "[name=" + name + ", description=" + description + ", price=" + price
-				+ ", imageName=" + imageName + ", status=" + status + ", selectedcategory=" + selectedcategory + "]";
+		return "Product [ID=" + getId() + ",name=" + name + ", description=" + description + ", price=" + price
+				+ ", status=" + status + ",imageName=" + imageName + "]";
 	}
 }

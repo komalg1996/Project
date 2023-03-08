@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,36 +29,42 @@ import com.code.dto.ProductDto;
 import com.code.dto.ResponseDto;
 import com.code.pojos.Category;
 import com.code.pojos.Product;
-import com.code.service.CategoryService;
-import com.code.service.ProductService;
+import com.code.service.ICategoryService;
+import com.code.service.IProductService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RestController
 @RequestMapping("/product")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin
 public class ProductController {
 
 	@Value("${file.upload.location}")
 	private String location;
 
-	@Autowired
-	private ProductService prodService;
+//	public ProductController() throws IOException {
+//		location = new ClassPathResource("static/images").getFile().getAbsolutePath(); 
+//	}
 
 	@Autowired
-	private CategoryService catService;
+	private IProductService prodService;
+
+	@Autowired
+	private ICategoryService catService;
 
 	@PostMapping("/add-product")
-	public ResponseEntity<?> addNewProduct(@RequestBody ProductDto productDto){
-//			@RequestParam(required = false) MultipartFile image) {
+	public ResponseEntity<?> addNewProduct(@RequestParam String productDto,
+			@RequestParam(required = false) MultipartFile image) {
+		System.out.println("data " + productDto + " " + image.getOriginalFilename() + " " + location);
 		String message = "";
 		try {
-			//ProductDto productDetails = new ObjectMapper().readValue(productDto, ProductDto.class);
+			ProductDto productDetails = new ObjectMapper().readValue(productDto, ProductDto.class);
 
-//			if (image != null) {
-//				image.transferTo(new File(location, image.getOriginalFilename()));
-//				productDetails.getProduct().setImageName(image.getOriginalFilename());
-//			}
-			message = prodService.addProduct(productDto);
+			if (image != null) {
+				image.transferTo(new File(location, image.getOriginalFilename()));
+				productDetails.getProduct().setImageName(image.getOriginalFilename());
+			}
+			// System.out.println("Product Details: "+productDetails);
+			message = prodService.addProduct(productDetails);
 		} catch (Exception e) {
 			message = "error";
 			e.printStackTrace();
@@ -97,27 +102,26 @@ public class ProductController {
 
 	// show all product details with stock
 	@GetMapping("/detail/{pid}")
-	public ResponseEntity<?> getProductDetail(@PathVariable Long pid) {
+	public ResponseEntity<?> getProductDetail(@PathVariable Integer pid) {
 		ProductDto productDetail = prodService.getProductDetail(pid);
 		return new ResponseEntity<>(new ResponseDto<>("success", productDetail), HttpStatus.OK);
 	}
 
 	// edit product
 	@PutMapping("/edit")
-	public ResponseEntity<?> editProduct(@RequestParam ProductDto productDto){
-			//@RequestParam(required = false) MultipartFile image) {
+	public ResponseEntity<?> editProduct(@RequestParam String productDto,
+			@RequestParam(required = false) MultipartFile image) {
 		String message = "";
 		try {
-//			ProductDto productDetails = new ObjectMapper().readValue(productDto, ProductDto.class);
-//
-//			if (image != null) {
-//				image.transferTo(new File(location, image.getOriginalFilename()));
-//				productDetails.getProduct().setImageName(image.getOriginalFilename());
-//			}
-//			ProductDto newProduct = prodService.editProduct(productDetails);
-//			// System.out.println("Product Details: "+productDetails);
-			message = productDto.getProduct().getName() + " edited successfully";
-			
+			ProductDto productDetails = new ObjectMapper().readValue(productDto, ProductDto.class);
+
+			if (image != null) {
+				image.transferTo(new File(location, image.getOriginalFilename()));
+				productDetails.getProduct().setImageName(image.getOriginalFilename());
+			}
+			ProductDto newProduct = prodService.editProduct(productDetails);
+			// System.out.println("Product Details: "+productDetails);
+			message = newProduct.getProduct().getName() + " edited successfully";
 		} catch (Exception e) {
 			message = "error";
 			e.printStackTrace();
@@ -127,7 +131,7 @@ public class ProductController {
 
 	// delete product
 	@DeleteMapping("/delete/{pid}")
-	public ResponseEntity<?> deleteProduct(@PathVariable Long pid) {
+	public ResponseEntity<?> deleteProduct(@PathVariable Integer pid) {
 		return new ResponseEntity<>(new ResponseDto<String>("success", prodService.deleteProduct(pid)), HttpStatus.OK);
 	}
 }

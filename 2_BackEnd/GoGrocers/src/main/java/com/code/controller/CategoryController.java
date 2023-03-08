@@ -17,38 +17,35 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.code.dto.ResponseDto;
 import com.code.pojos.Category;
-import com.code.service.CategoryServiceImpl;
-import com.code.service.CategoryService;
+import com.code.service.ICategoryService;
+
+
 
 @RestController
 @RequestMapping("/category")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin
 public class CategoryController {
+	
 	@Autowired
-	private CategoryService categoryService;
-
+	private ICategoryService catService;
+	
 	@PostMapping("/add")
-	public ResponseEntity<?> addNewCategory(@RequestBody Category category) {
-		return new ResponseEntity<>(new ResponseDto<Category>("Success", categoryService.addOrEditCategory(category)),
-				HttpStatus.CREATED);
+	public ResponseEntity<?> addNewCategory(@RequestBody Category category){
+		return new ResponseEntity<>(new ResponseDto<Category>("success", catService.addOrEditCategory(category)),HttpStatus.CREATED);
 	}
-
+	
 	@GetMapping("/all")
-	public ResponseEntity<?> getAllCategories() {
-		return new ResponseEntity<>(new ResponseDto<List<Category>>("Success", categoryService.getAllCategories()),
-				HttpStatus.OK);
+	public ResponseEntity<?> getAllCategories(){
+		return new ResponseEntity<>(new ResponseDto<List<Category>>("success", catService.getAllCategories()),HttpStatus.OK);
 	}
-
+	
 	@PutMapping("/edit")
-	public ResponseEntity<?> editCategory(@RequestBody Category category) {
-		return new ResponseEntity<>(new ResponseDto<Category>("success", categoryService.addOrEditCategory(category)),
-				HttpStatus.CREATED);
+	public ResponseEntity<?> editCategory(@RequestBody Category category){
+		return new ResponseEntity<>(new ResponseDto<Category>("success", catService.addOrEditCategory(category)),HttpStatus.CREATED);
 	}
-
+	
 	@DeleteMapping("/delete/{cid}")
-	public ResponseEntity<?> deleteCategory(@PathVariable Long cid) {
-		return new ResponseEntity<>(new ResponseDto<String>("success", categoryService.deleteCategoryById(cid)),
-				HttpStatus.OK);
+	public ResponseEntity<?> deleteCategory(@PathVariable Integer cid){
+		return new ResponseEntity<>(new ResponseDto<String>("success",catService.deleteCategoryById(cid)),HttpStatus.OK);
 	}
-
 }

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,57 +19,59 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.code.dto.ResponseDto;
 import com.code.pojos.Cart;
-import com.code.service.CartService;
+import com.code.service.ICartService;
+
+
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/cart")
+@CrossOrigin
 public class CartController {
-	@Autowired
-	private CartService cartService;
-
-	// add to cart
-	public ResponseEntity<?> addToCart(@RequestBody HashMap<String, Long> map) {
-		Long productId = map.get("productId");
-		Long quantity = map.get("quantity");
-		Long userId = Long.parseLong(SecurityContextHolder.getContext().getAuthentication().getName());
-		return new ResponseEntity<>(
-				new ResponseDto<>("Success", cartService.addItemToCart(productId, quantity.intValue(), userId)),
-				HttpStatus.CREATED);
+	
+	@Autowired 
+	private ICartService cartService;
+	
+	//add to cart
+	@PostMapping("/add")
+	public ResponseEntity<?> addToCart(@RequestBody HashMap<String, Integer> map){
+		Integer productId = map.get("productId");
+		Integer quantity = map.get("quantity");
+		System.out.println("ProductId: "+productId+" quantity: "+quantity);
+		Integer userId = Integer.parseInt(SecurityContextHolder.getContext().getAuthentication().getName());
+		return new ResponseEntity<>(new ResponseDto<>("success", cartService.addItemToCart(productId,quantity,userId)),HttpStatus.CREATED);
 	}
-
-	// view cart
+	
+	//view cart
 	@GetMapping("/all")
-	public ResponseEntity<?> getCartContents() {
-		Long userId = Long.parseLong(SecurityContextHolder.getContext().getAuthentication().getName());
-		List<Cart> cartItems = cartService.getAllCartContents(userId);
-		return new ResponseEntity<>(new ResponseDto<>("success", cartItems), HttpStatus.OK);
+	public ResponseEntity<?> getCartContents(){
+		Integer userId = Integer.parseInt(SecurityContextHolder.getContext().getAuthentication().getName());
+		List<Cart> cartItems= cartService.getAllCartContents(userId);
+		return new ResponseEntity<>(new ResponseDto<>("success", cartItems),HttpStatus.OK);
 	}
-
-	// update quantity
+	
+	//update quantity
 	@PutMapping("/update")
-	public ResponseEntity<?> updateQuantity(@RequestBody HashMap<String, Long> map) {
-		Long cartId = map.get("cartId");
-		Long quantity = map.get("quantity");
-		String message = cartService.updateQuantity(cartId, quantity.intValue());
+	public ResponseEntity<?> updateQuantity(@RequestBody HashMap<String, Integer> map){
+		Integer cartId = map.get("cartId");
+		Integer quantity = map.get("quantity");
+		String message = cartService.updateQuantity(cartId,quantity);
 		Cart updatedCart = cartService.findById(cartId).get();
-		return new ResponseEntity<>(new ResponseDto<>(message, updatedCart), HttpStatus.ACCEPTED);
+		return new ResponseEntity<>(new ResponseDto<>(message,updatedCart),HttpStatus.ACCEPTED);
 	}
-
-	// remove from cart
+	
+	//remove from cart
 	@DeleteMapping("/delete/{cartId}")
-	public ResponseEntity<?> removeFromCart(@PathVariable Long cartId) {
+	public ResponseEntity<?> removeFromCart(@PathVariable Integer cartId){
 		String productName = cartService.findById(cartId).get().getSelectedProduct().getName();
 		cartService.deleteFromCart(cartId);
-		return new ResponseEntity<>(new ResponseDto<>("success", productName + " removed from cart"), HttpStatus.OK);
+		return new ResponseEntity<>(new ResponseDto<>("success",productName +" removed from cart"),HttpStatus.OK);
 	}
-
-	// remove all from cart
+	
+	//remove all from cart
 	@DeleteMapping("/delete/all")
-	public ResponseEntity<?> removeAllFromCart() {
-		Long userId = Long.parseLong(SecurityContextHolder.getContext().getAuthentication().getName());
+	public ResponseEntity<?> removeAllFromCart(){
+		Integer userId = Integer.parseInt(SecurityContextHolder.getContext().getAuthentication().getName());
 		cartService.deleteAllFromCart(userId);
-		return new ResponseEntity<>(new ResponseDto<>("success", "Cart destroyed for user with userId: " + userId),
-				HttpStatus.OK);
+		return new ResponseEntity<>(new ResponseDto<>("success","Cart destroyed for user with userId: "+userId),HttpStatus.OK);
 	}
 }

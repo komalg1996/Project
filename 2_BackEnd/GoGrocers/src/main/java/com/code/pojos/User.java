@@ -7,42 +7,45 @@ import javax.persistence.Enumerated;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Users_table")
+@Table(name = "users")
 public class User extends BaseEntity {
-	@Column(length = 20)
+	@Column(length = 30)
 	private String firstName;
-	@Column(length = 20)
-	private String lastName;
-	@Column(length = 25, unique = true) // unique constraint
-	private String email;
-	@Column(nullable = false)
-	private String password; // not null constraint
-	@Column(length = 20)
-	private String phone;
-	@Enumerated(EnumType.STRING)
-	@Column(length = 20)
-	private Role userRole;
 
-	// default ctr
+	@Column(length = 30)
+	private String lastName;
+
+	@Column(length = 30, unique = true)
+	private String email;
+
+	@Column(nullable = false)
+	private String password;
+
+	@Column(length = 15)
+	private String phone;
+
+	@Enumerated(EnumType.STRING)
+	private Role role;
+
 	public User() {
-		this.firstName = "Komal";
 	}
 
-	// parametrised ctr
-	public User(String firstName, String lastName, String email, String password, String phone, Role userRole) {
+	public User(String firstName, String lastName, String email, String password, String phone, Role role) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
 		this.phone = phone;
-		this.userRole = userRole;
+		this.role = role;
 	}
 
-	@Override
-	public String toString() {
-		return "User [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", password=" + password
-				+ ", phone=" + phone + ", userRole=" + userRole + "]";
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getFirstName() {
@@ -69,14 +72,6 @@ public class User extends BaseEntity {
 		this.email = email;
 	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
 	public String getPhone() {
 		return phone;
 	}
@@ -85,12 +80,18 @@ public class User extends BaseEntity {
 		this.phone = phone;
 	}
 
-	public Role getuserRole() {
-		return userRole;
+	public Role getRole() {
+		return role;
 	}
 
-	public void setRole(Role userRole) {
-		this.userRole = userRole;
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
+	@Override
+	public String toString() {
+		return "User [ID=" + getId() + ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", email=" + email + ", phone=" + phone + ", role=" + role + "]";
 	}
 
 }

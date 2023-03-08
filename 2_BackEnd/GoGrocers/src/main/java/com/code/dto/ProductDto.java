@@ -44,7 +44,6 @@ public class ProductDto {
 
 	@Override
 	public String toString() {
-		return "ProductDto [product=" + product + ", category=" + category + ", stock=" + stock + "]";
+		return "ProductInputDto [product=" + product + ", category=" + category + ", stock=" + stock + "]";
 	}
-	
 }

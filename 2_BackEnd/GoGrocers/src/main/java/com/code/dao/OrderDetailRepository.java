@@ -8,7 +8,8 @@ import org.springframework.data.repository.query.Param;
 
 import com.code.pojos.OrderDetail;
 
-public interface OrderDetailRepository extends JpaRepository<OrderDetail, Long>{
+public interface OrderDetailRepository extends JpaRepository<OrderDetail, Integer>{
+
 	@Query("Select od from OrderDetail od where od.currentOrder.id=:id")
-	List<OrderDetail> findAllByOrderId(@Param("id") Long id);
+	List<OrderDetail> findAllByOrderId(@Param("id") Integer id);
 }

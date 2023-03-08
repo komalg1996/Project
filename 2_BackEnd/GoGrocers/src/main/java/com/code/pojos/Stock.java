@@ -7,28 +7,27 @@ import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "stock")
 public class Stock extends BaseEntity {
+
 	private int quantity;
-	
 	@Column(length = 10)
 	private String unit;
-	
 	@OneToOne
 	@JoinColumn(name = "product_id")
 	@MapsId
 	private Product currentProduct;
 
 	public Stock() {
-
 	}
 
-	public Stock(int quantity, String unit, Product currentProduct) {
+	public Stock(int quantity, String unit) {
 		super();
 		this.quantity = quantity;
 		this.unit = unit;
-		this.currentProduct = currentProduct;
 	}
 
 	public int getQuantity() {
@@ -47,6 +46,7 @@ public class Stock extends BaseEntity {
 		this.unit = unit;
 	}
 
+	@JsonIgnore
 	public Product getCurrentProduct() {
 		return currentProduct;
 	}

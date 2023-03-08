@@ -10,46 +10,41 @@ import org.springframework.stereotype.Service;
 import com.code.custome_exeception.CategoryNotFoundException;
 import com.code.dao.CategoryRepository;
 import com.code.pojos.Category;
-import com.code.pojos.Product;
 
 @Service
 @Transactional
-public class CategoryServiceImpl implements CategoryService{
+public class CategoryServiceImpl implements ICategoryService{
+
 	@Autowired
-	private CategoryRepository crepo;
+	private CategoryRepository catRepo;
+
 	@Autowired
-	private ProductServiceImpl prepo;
+	private IProductService prodService;
 	
-	//get
+	@Override
+	public Category addOrEditCategory(Category cat) {
+		return catRepo.save(cat);
+	}
+
 	@Override
 	public List<Category> getAllCategories() {
-
-		return crepo.findAll();
-	}
-	
-	@Override
-	public Category addOrEditCategory(Category category) {
-		return crepo.save(category);
+		return catRepo.findAll();
 	}
 
 	@Override
-	public String deleteCategoryById(Long id) {
-		Category categoryToDelete = crepo.findById(id).get();
+	public String deleteCategoryById(Integer cid) {
+		Category categoryToDelete = catRepo.findById(cid).get();
 		String catName = categoryToDelete.getName();
 		categoryToDelete.getProducts().forEach(product -> {
-			prepo.deleteProduct(product.getId());
+			prodService.deleteProduct(product.getId());
 		});
-		return catName + "Category Deleted Successfully";
+		catRepo.deleteById(cid);
+		return catName+" Category deleted successfully!";
 	}
 
 	@Override
 	public Category findByName(String categoryName) {
-		return crepo.findByName(categoryName)
-				.orElseThrow(() -> new CategoryNotFoundException("No such Category available"));
+		return catRepo.findByName(categoryName).orElseThrow( () -> new CategoryNotFoundException("No such category available"));
 	}
-	
-	
-	
-	
 
 }

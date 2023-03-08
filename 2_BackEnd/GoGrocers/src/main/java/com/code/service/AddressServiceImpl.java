@@ -12,23 +12,24 @@ import com.code.pojos.Address;
 
 @Service
 @Transactional
-public class AddressSreviceImpl implements AddressService {
+public class AddressServiceImpl implements IAddressService{
+	
 	@Autowired
 	private AddressRepository addrRepo;
+	
 	@Override
-	public List<Address> GetAllAddressessByUserId(Long userId) {
-		return addrRepo.GetAllAddressesByUserId(userId);
+	public List<Address> getAllAddressesByUserId(Integer userId) {
+		return addrRepo.getAllAddressesByUserId(userId);
 	}
 
 	@Override
-	public Address AddOrEditAddress(Address addr) {
+	public Address addOrEditAddress(Address addr) {
 		return addrRepo.save(addr);
 	}
 
 	@Override
-	public String DeleteAddressById(Long userId) {
-		addrRepo.deleteById(userId);
-		return "Address of ID" + userId + "is deleted Successfully";
+	public String deleteAddressById(Integer addrId) {
+		addrRepo.deleteById(addrId);
+		return "Address with id : " + addrId + " deleted successfully!!";
 	}
-
 }

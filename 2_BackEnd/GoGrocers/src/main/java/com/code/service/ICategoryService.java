@@ -3,17 +3,13 @@ package com.code.service;
 import java.util.List;
 
 import com.code.pojos.Category;
-import com.code.pojos.Product;
 
-public interface CategoryService {
+public interface ICategoryService {
+	Category addOrEditCategory(Category cat);
 
 	List<Category> getAllCategories();
-	
-	Category addOrEditCategory(Category category);
-	
-	String deleteCategoryById(Long id);
+
+	String deleteCategoryById(Integer cid);
 
 	Category findByName(String categoryName);
-	
-	
 }

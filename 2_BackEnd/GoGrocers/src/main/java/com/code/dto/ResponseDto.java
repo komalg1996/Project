@@ -3,9 +3,8 @@ package com.code.dto;
 public class ResponseDto<T> {
 	private String status;
 	private T data;
-	
+
 	public ResponseDto() {
-		
 	}
 
 	public ResponseDto(String status, T data) {
@@ -34,5 +33,4 @@ public class ResponseDto<T> {
 	public String toString() {
 		return "ResponseDto [status=" + status + ", data=" + data + "]";
 	}
-	
 }

@@ -2,7 +2,7 @@ package com.code.dto;
 
 public class OrderPlaceDto {
 	private String paymentMode;
-	private long addressId;
+	private int addressId;
 
 	public OrderPlaceDto() {
 	}
@@ -21,7 +21,7 @@ public class OrderPlaceDto {
 		this.paymentMode = paymentMode;
 	}
 
-	public long getAddressId() {
+	public int getAddressId() {
 		return addressId;
 	}
 
@@ -34,4 +34,3 @@ public class OrderPlaceDto {
 		return "OrderPlaceDto [paymentMode=" + paymentMode + ", addressId=" + addressId + "]";
 	}
 }
-

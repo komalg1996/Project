@@ -8,8 +8,8 @@ import org.springframework.data.repository.query.Param;
 
 import com.code.pojos.Cart;
 
-public interface CartRepository extends JpaRepository<Cart, Long> {
+public interface CartRepository extends JpaRepository<Cart, Integer>{
 
 	@Query("Select c from Cart c join fetch c.selectedProduct where c.currentCustomer.id=:id")
-	List<Cart> findAllItemsByUser(@Param("id") Long userId);
+	List<Cart> findAllItemsByUser(@Param("id") Integer userId);
 }

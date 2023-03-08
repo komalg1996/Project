@@ -12,29 +12,33 @@ import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "payments")
-public class Payment extends BaseEntity{
+public class Payment extends BaseEntity {
+
 	private double amount;
+
 	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
-	@Column(name = "payment_date")
 	private LocalDateTime paymentDate;
+
 	@Enumerated(EnumType.STRING)
-	@Column(length = 20)
+	@Column(length = 12)
 	private PaymentStatus status;
+
 	@Enumerated(EnumType.STRING)
-	@Column(length = 20)
-	private PaymentMethod type;
+	@Column(length = 12)
+	private Type type;
+
 	@OneToOne
 	@JoinColumn(name = "order_id")
 	private Order currentOrder;
-	
+
 	public Payment() {
-		
 	}
 
-	public Payment(double amount, LocalDateTime paymentDate, PaymentStatus status, PaymentMethod type,
-			Order currentOrder) {
+	public Payment(double amount, LocalDateTime paymentDate, PaymentStatus status, Type type, Order currentOrder) {
 		super();
 		this.amount = amount;
 		this.paymentDate = paymentDate;
@@ -67,14 +71,15 @@ public class Payment extends BaseEntity{
 		this.status = status;
 	}
 
-	public PaymentMethod getType() {
+	public Type getType() {
 		return type;
 	}
 
-	public void setType(PaymentMethod type) {
+	public void setType(Type type) {
 		this.type = type;
 	}
 
+	@JsonIgnore
 	public Order getCurrentOrder() {
 		return currentOrder;
 	}
@@ -88,6 +93,4 @@ public class Payment extends BaseEntity{
 		return "Payment [amount=" + amount + ", paymentDate=" + paymentDate + ", status=" + status + ", type=" + type
 				+ "]";
 	}
-	
-	
 }

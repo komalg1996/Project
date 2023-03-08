@@ -9,20 +9,20 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import com.code.custome_exeception.UserNotFoundException;
 import com.code.dto.ErrorResponse;
 
+
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 	@ExceptionHandler(UserNotFoundException.class)
-	public ResponseEntity<ErrorResponse> handlerUserNotFoundException(UserNotFoundException e) {
-		System.out.println("in handle user not found exe");
-		return new ResponseEntity<ErrorResponse>(new ErrorResponse("Error", "Invalid Login", e.getMessage()),
+	public ResponseEntity<ErrorResponse> handleUserNotFoundException(UserNotFoundException e) {
+		System.out.println("In handle user not found exception");
+		return new ResponseEntity<ErrorResponse>(new ErrorResponse("error", "Invalid Login", e.getMessage()),
 				HttpStatus.BAD_REQUEST);
 	}
 
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<ErrorResponse> handleBankAccountHandlingException(Exception e) {
 		System.out.println("in handle any exc");
-		return new ResponseEntity<>(new ErrorResponse("Error", "Server side error!", e.getMessage()),
+		return new ResponseEntity<>(new ErrorResponse("error", "Server side error!", e.getMessage()),
 				HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 }
-

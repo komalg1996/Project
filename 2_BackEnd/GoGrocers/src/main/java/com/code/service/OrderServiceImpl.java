@@ -23,14 +23,15 @@ import com.code.pojos.Order;
 import com.code.pojos.OrderDetail;
 import com.code.pojos.OrderStatus;
 import com.code.pojos.Payment;
-import com.code.pojos.PaymentMethod;
 import com.code.pojos.PaymentStatus;
 import com.code.pojos.Stock;
+import com.code.pojos.Type;
 import com.code.pojos.User;
 
 @Service
 @Transactional
-public class OrderServiceImpl implements OrderService {
+public class OrderServiceImpl implements IOrderService {
+
 	@Autowired
 	private OrderRepository orderRepo;
 
@@ -53,9 +54,10 @@ public class OrderServiceImpl implements OrderService {
 	private PaymentRepository payRepo;
 
 	@Override
-	public String placeOrderForUser(Long userId, Long addrId, String paymentMode) {
+	public String placeOrderForUser(Integer userId, Integer addrId, String paymentMode) {
 		// get all cart items for given user
 		List<Cart> cartItems = cartRepo.findAllItemsByUser(userId);
+
 		double total = 0.0;
 		int deliveryCharges = 25;
 		for (Cart item : cartItems) {
@@ -68,6 +70,7 @@ public class OrderServiceImpl implements OrderService {
 			total += item.getQuantity() * item.getSelectedProduct().getPrice();
 			stock.setQuantity(stockQuantity - orderQuantity);
 		}
+
 		Address address = addrRepo.findById(addrId).get();
 		User user = userRepo.findById(userId).get();
 
@@ -76,7 +79,7 @@ public class OrderServiceImpl implements OrderService {
 		orderRepo.save(newOrder);
 
 		Payment payment = new Payment(total + deliveryCharges, LocalDateTime.now(),
-				paymentMode.equals("COD") ? PaymentStatus.PENDING : PaymentStatus.COMPLETED, PaymentMethod.valueOf(paymentMode),
+				paymentMode.equals("COD") ? PaymentStatus.PENDING : PaymentStatus.COMPLETED, Type.valueOf(paymentMode),
 				newOrder);
 		payRepo.save(payment);
 		cartItems.forEach(item -> {
@@ -101,7 +104,7 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public List<OrderResponse> getAllCustomerOrders(Long userId) {
+	public List<OrderResponse> getAllCustomerOrders(Integer userId) {
 		List<Order> orders = orderRepo.findAllOrdersByUserId(userId);
 
 		List<OrderResponse> response = new ArrayList<>();
@@ -115,20 +118,20 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public void assignEmployee(Long userId, Long orderId) {
+	public void assignEmployee(Integer userId, Integer orderId) {
 		Order order = orderRepo.findById(orderId).get();
 		User employee = userRepo.findById(userId).get();
 		order.setEmployee(employee);
-		if (employee.getuserRole().name().equals("EMPLOYEE")) {
+		if (employee.getRole().name().equals("EMPLOYEE")) {
 			order.setOrderStatus(OrderStatus.PACKING);
-			order.setStatusUdpateTime(LocalDateTime.now());
-		} else if (employee.getuserRole().name().equals("DELIVERY_PERSON"))
+			order.setStatusUpdateDate(LocalDateTime.now());
+		} else if (employee.getRole().name().equals("DELIVERY_PERSON"))
 			order.setOrderStatus(OrderStatus.OUT_FOR_DELIVERY);
 		return;
 	}
 
 	@Override
-	public List<OrderResponse> getAllAssignedOrders(Long userId) {
+	public List<OrderResponse> getAllAssignedOrders(Integer userId) {
 		List<Order> orders = orderRepo.findAllOrdersByEmployeeId(userId);
 
 		List<OrderResponse> response = new ArrayList<>();
@@ -142,14 +145,16 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public void updateOrderStatus(Long orderId, String status) {
+	public void updateOrderStatus(Integer orderId, String status) {
 		Order order = orderRepo.findById(orderId).get();
 		order.setOrderStatus(OrderStatus.valueOf(status));
-		order.setStatusUdpateTime(LocalDateTime.now());
+		order.setStatusUpdateDate(LocalDateTime.now());
 		if (status.equals("DELIVERED")) {
 			Payment payment = payRepo.findPaymentByOrderId(orderId);
 			payment.setStatus(PaymentStatus.COMPLETED);
 		}
 		return;
+
 	}
+
 }

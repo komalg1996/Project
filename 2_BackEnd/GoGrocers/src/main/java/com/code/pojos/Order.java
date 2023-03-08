@@ -14,9 +14,12 @@ import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "orders")
 public class Order extends BaseEntity {
+
 	private double totalPrice;
 
 	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
@@ -27,7 +30,7 @@ public class Order extends BaseEntity {
 	private OrderStatus orderStatus;
 
 	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
-	private LocalDateTime statusUdpateTime;
+	private LocalDateTime statusUpdateDate;
 
 	@OneToOne
 	@JoinColumn(name = "delivery_address_id")
@@ -44,13 +47,13 @@ public class Order extends BaseEntity {
 	public Order() {
 	}
 
-	public Order(double totalPrice, LocalDateTime orderDate, OrderStatus orderStatus, LocalDateTime statusUdpateTime,
+	public Order(double totalPrice, LocalDateTime orderDate, OrderStatus orderStatus, LocalDateTime statusUpdateDate,
 			Address deliveryAddress, User customer, User employee) {
 		super();
 		this.totalPrice = totalPrice;
 		this.orderDate = orderDate;
 		this.orderStatus = orderStatus;
-		this.statusUdpateTime = statusUdpateTime;
+		this.statusUpdateDate = statusUpdateDate;
 		this.deliveryAddress = deliveryAddress;
 		this.customer = customer;
 		this.employee = employee;
@@ -80,12 +83,12 @@ public class Order extends BaseEntity {
 		this.orderStatus = orderStatus;
 	}
 
-	public LocalDateTime getStatusUdpateTime() {
-		return statusUdpateTime;
+	public LocalDateTime getStatusUpdateDate() {
+		return statusUpdateDate;
 	}
 
-	public void setStatusUdpateTime(LocalDateTime statusUdpateTime) {
-		this.statusUdpateTime = statusUdpateTime;
+	public void setStatusUpdateDate(LocalDateTime statusUpdateDate) {
+		this.statusUpdateDate = statusUpdateDate;
 	}
 
 	public Address getDeliveryAddress() {
@@ -104,6 +107,7 @@ public class Order extends BaseEntity {
 		this.customer = customer;
 	}
 
+	@JsonIgnore
 	public User getEmployee() {
 		return employee;
 	}
@@ -114,7 +118,7 @@ public class Order extends BaseEntity {
 
 	@Override
 	public String toString() {
-		return "Order Id" + getId() + " [totalPrice=" + totalPrice + ", orderDate=" + orderDate + ", orderStatus="
-				+ orderStatus + ", statusUdpateTime=" + statusUdpateTime + ", deliveryAddress=" + deliveryAddress + "]";
+		return "Order [ID=" + getId() + ",totalPrice=" + totalPrice + ", orderDate=" + orderDate + ", orderStatus="
+				+ orderStatus + ", statusUpdateDate=" + statusUpdateDate + "]";
 	}
 }

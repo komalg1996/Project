@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class ErrorResponse {
 	private String status;
 	private String message;
-	private LocalDateTime timestamp;
+	private LocalDateTime timeStamp;
 	private String errDetails;
 
 	public ErrorResponse() {
@@ -16,6 +16,7 @@ public class ErrorResponse {
 		this.status = status;
 		this.message = message;
 		this.errDetails = errDetails;
+		this.timeStamp = LocalDateTime.now();
 	}
 
 	public String getStatus() {
@@ -34,12 +35,12 @@ public class ErrorResponse {
 		this.message = message;
 	}
 
-	public LocalDateTime getTimestamp() {
-		return timestamp;
+	public LocalDateTime getTimeStamp() {
+		return timeStamp;
 	}
 
-	public void setTimestamp(LocalDateTime timestamp) {
-		this.timestamp = timestamp;
+	public void setTimeStamp(LocalDateTime timeStamp) {
+		this.timeStamp = timeStamp;
 	}
 
 	public String getErrDetails() {
@@ -52,7 +53,6 @@ public class ErrorResponse {
 
 	@Override
 	public String toString() {
-		return message + " timeStamp=" + timestamp;
+		return message + " timeStamp=" + timeStamp;
 	}
 }
-
