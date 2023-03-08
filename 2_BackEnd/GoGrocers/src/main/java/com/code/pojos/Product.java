@@ -1,5 +1,7 @@
 package com.code.pojos;
 
+import java.util.Arrays;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -7,6 +9,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Lob;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -23,6 +26,10 @@ public class Product extends BaseEntity {
 
 	@Column(length = 30)
 	private String imageName;
+	
+	@Lob
+	    @Column(name = "imagedata")
+	    private byte[] imageData;
 
 	@Column(length = 30)
 	@Enumerated(EnumType.STRING)
@@ -83,6 +90,12 @@ public class Product extends BaseEntity {
 	public void setStatus(Status status) {
 		this.status = status;
 	}
+	public byte[] getImageData() {
+		return imageData;
+	}
+	public void setImageData(byte[] imageData) {
+		this.imageData = imageData;
+	}
 
 	@JsonIgnore
 	public Category getSelectedcategory() {
@@ -95,7 +108,11 @@ public class Product extends BaseEntity {
 
 	@Override
 	public String toString() {
-		return "Product Id" + getId() + "[name=" + name + ", description=" + description + ", price=" + price
-				+ ", imageName=" + imageName + ", status=" + status + ", selectedcategory=" + selectedcategory + "]";
+		return "Product [name=" + name + ", description=" + description + ", price=" + price + ", imageName="
+				+ imageName + ", imageData=" + Arrays.toString(imageData) + ", status=" + status + ", selectedcategory="
+				+ selectedcategory + "]";
 	}
+
+	
+	
 }
