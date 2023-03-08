@@ -1,7 +1,10 @@
 package com.code.controller;
 
 import java.util.List;
+import java.util.logging.LogManager;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,9 +46,13 @@ public class UserController {
 		System.out.println("-----ctor " + getClass().getName() + "----------");
 	}
 
+	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
+	
 	@PostMapping("/register")
 	public ResponseEntity<?> registerUser(@RequestBody User user) {
 		System.out.println("in create new user" + user);
+		logger.info("I have called register Api");
 		user.setPassword(encoder.encode(user.getPassword()));
 		System.out.println(user.getPassword());
 		return new ResponseEntity<>(new ResponseDto<User>("success", userService.registerOrEditUser(user)),

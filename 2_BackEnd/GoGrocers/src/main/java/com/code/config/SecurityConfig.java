@@ -35,8 +35,8 @@ public class SecurityConfig {
 				.antMatchers("/cart/**").permitAll()
 				.antMatchers("/category/**").permitAll()
 				.antMatchers("/order/**").permitAll()
-				.antMatchers("/product/**")
-				.hasRole("CUSTOMER").antMatchers("/products/view", "/auth/**", "/swagger*/**", "/v*/api-docs/**")
+				.antMatchers("/product/**").permitAll()
+				.antMatchers("/products/view", "/auth/**", "/swagger*/**", "/v*/api-docs/**")
 				.permitAll().antMatchers(HttpMethod.OPTIONS).permitAll().anyRequest().authenticated().and()
 				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				.addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class);

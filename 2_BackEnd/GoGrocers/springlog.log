@@ -1,0 +1,891 @@
+2023-53-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 26720 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-53-05-No active profile set, falling back to 1 default profile: "default" 
+2023-53-05-Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2023-53-05-For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2023-53-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-53-05-Finished Spring Data repository scanning in 53 ms. Found 9 JPA repository interfaces. 
+2023-53-05-Tomcat initialized with port(s): 8080 (http) 
+2023-53-05-Starting service [Tomcat] 
+2023-53-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-53-05-Initializing Spring embedded WebApplicationContext 
+2023-53-05-Root WebApplicationContext: initialization completed in 1592 ms 
+2023-53-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-53-05-HHH000412: Hibernate ORM core version 5.6.14.Final 
+2023-53-05-HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2023-53-05-HikariPool-1 - Starting... 
+2023-53-05-HikariPool-1 - Start completed. 
+2023-53-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-53-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-53-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-54-05-Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@44abbfef, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cf08c84, org.springframework.security.web.context.SecurityContextPersistenceFilter@113bdaa3, org.springframework.security.web.header.HeaderWriterFilter@1faac7aa, org.springframework.web.filter.CorsFilter@4872d1e8, org.springframework.security.web.authentication.logout.LogoutFilter@739f9fb5, com.code.filter.JwtFilter$$EnhancerBySpringCGLIB$$2218bd72@383300a9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@191c2688, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5709ec1a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ed8fdfd, org.springframework.security.web.session.SessionManagementFilter@16ae69e5, org.springframework.security.web.access.ExceptionTranslationFilter@306d99a8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e0bb745] 
+2023-54-05-LiveReload server is running on port 35729 
+2023-54-05-Tomcat started on port(s): 8080 (http) with context path '' 
+2023-54-05-Started GoGrocersApplication in 5.223 seconds (JVM running for 6.336) 
+2023-56-05-Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-56-05-Initializing Servlet 'dispatcherServlet' 
+2023-56-05-Completed initialization in 2 ms 
+2023-56-05-Init duration for springdoc-openapi is: 379 ms 
+2023-58-05-I have called register Api 
+2023-02-05-I have called register Api 
+2023-04-05-I have called register Api 
+2023-20-05-Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting double-quote to start field name<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 3]] 
+2023-30-05-Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2023-30-05-Stopping service [Tomcat] 
+2023-30-05-Destroying Spring FrameworkServlet 'dispatcherServlet' 
+2023-30-05-The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.16/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.16/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.16/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.16/java.lang.Thread.run(Thread.java:834) 
+2023-30-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-30-05-HikariPool-1 - Shutdown initiated... 
+2023-30-05-HikariPool-1 - Shutdown completed. 
+2023-30-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 26720 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-30-05-No active profile set, falling back to 1 default profile: "default" 
+2023-30-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-30-05-Finished Spring Data repository scanning in 25 ms. Found 9 JPA repository interfaces. 
+2023-30-05-Tomcat initialized with port(s): 8080 (http) 
+2023-30-05-Starting service [Tomcat] 
+2023-30-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-30-05-Initializing Spring embedded WebApplicationContext 
+2023-30-05-Root WebApplicationContext: initialization completed in 307 ms 
+2023-30-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-30-05-HikariPool-2 - Starting... 
+2023-30-05-HikariPool-2 - Start completed. 
+2023-30-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-30-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-30-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-30-05-Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@22f2cc46, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b207b3c, org.springframework.security.web.context.SecurityContextPersistenceFilter@7768b00b, org.springframework.security.web.header.HeaderWriterFilter@61623a8b, org.springframework.web.filter.CorsFilter@321ab2c2, org.springframework.security.web.authentication.logout.LogoutFilter@15da4301, com.code.filter.JwtFilter$$EnhancerBySpringCGLIB$$2218bd72@45ec7d77, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23c9c7d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@538f1746, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e5cd274, org.springframework.security.web.session.SessionManagementFilter@45eb9ceb, org.springframework.security.web.access.ExceptionTranslationFilter@57906cbc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@dba2419] 
+2023-30-05-LiveReload server is running on port 35729 
+2023-30-05-Tomcat started on port(s): 8080 (http) with context path '' 
+2023-30-05-Started GoGrocersApplication in 1.398 seconds (JVM running for 2208.687) 
+2023-30-05-Condition evaluation unchanged 
+2023-30-05-Application shutdown requested. 
+2023-30-05-Stopping service [Tomcat] 
+2023-30-05-The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.16/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.16/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.16/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.16/java.lang.Thread.run(Thread.java:834) 
+2023-30-05-The web application [ROOT] appears to have started a thread named [HikariPool-2 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.16/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.16/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.16/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.16/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:458)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.16/java.lang.Thread.run(Thread.java:834) 
+2023-30-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-30-05-HikariPool-2 - Shutdown initiated... 
+2023-30-05-HikariPool-2 - Shutdown completed. 
+2023-30-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 4724 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-30-05-No active profile set, falling back to 1 default profile: "default" 
+2023-30-05-Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2023-30-05-For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2023-30-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-30-05-Finished Spring Data repository scanning in 78 ms. Found 9 JPA repository interfaces. 
+2023-30-05-Tomcat initialized with port(s): 8080 (http) 
+2023-30-05-Starting service [Tomcat] 
+2023-30-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-30-05-Initializing Spring embedded WebApplicationContext 
+2023-30-05-Root WebApplicationContext: initialization completed in 1535 ms 
+2023-30-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-30-05-HHH000412: Hibernate ORM core version 5.6.14.Final 
+2023-30-05-HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2023-30-05-HikariPool-1 - Starting... 
+2023-30-05-HikariPool-1 - Start completed. 
+2023-30-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-30-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-30-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-30-05-Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3f1945c4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@613a3e5e, org.springframework.security.web.context.SecurityContextPersistenceFilter@220f73a9, org.springframework.security.web.header.HeaderWriterFilter@42c3299e, org.springframework.web.filter.CorsFilter@18741091, org.springframework.security.web.authentication.logout.LogoutFilter@739f9fb5, com.code.filter.JwtFilter$$EnhancerBySpringCGLIB$$30dc4ed0@34055d19, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@191c2688, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5709ec1a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1425c798, org.springframework.security.web.session.SessionManagementFilter@6e2184bc, org.springframework.security.web.access.ExceptionTranslationFilter@306d99a8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@44abbfef] 
+2023-30-05-LiveReload server is running on port 35729 
+2023-30-05-Tomcat started on port(s): 8080 (http) with context path '' 
+2023-30-05-Started GoGrocersApplication in 4.701 seconds (JVM running for 5.737) 
+2023-31-05-Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-31-05-Initializing Servlet 'dispatcherServlet' 
+2023-31-05-Completed initialization in 3 ms 
+2023-31-05-Init duration for springdoc-openapi is: 329 ms 
+2023-43-05-Invalid JWT : JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted. 
+2023-46-05-Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2023-46-05-Stopping service [Tomcat] 
+2023-46-05-Destroying Spring FrameworkServlet 'dispatcherServlet' 
+2023-46-05-The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.16/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.16/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.16/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.16/java.lang.Thread.run(Thread.java:834) 
+2023-46-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-46-05-HikariPool-1 - Shutdown initiated... 
+2023-46-05-HikariPool-1 - Shutdown completed. 
+2023-46-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 4724 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-46-05-No active profile set, falling back to 1 default profile: "default" 
+2023-46-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-46-05-Finished Spring Data repository scanning in 26 ms. Found 9 JPA repository interfaces. 
+2023-46-05-Tomcat initialized with port(s): 8080 (http) 
+2023-46-05-Starting service [Tomcat] 
+2023-46-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-46-05-Initializing Spring embedded WebApplicationContext 
+2023-46-05-Root WebApplicationContext: initialization completed in 252 ms 
+2023-46-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-46-05-HikariPool-2 - Starting... 
+2023-46-05-HikariPool-2 - Start completed. 
+2023-46-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-46-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-46-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-46-05-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChains' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'filterChain' defined in class path resource [com/code/config/SecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method hasRole(String) is undefined for the type ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry
+ 
+2023-46-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-46-05-HikariPool-2 - Shutdown initiated... 
+2023-46-05-HikariPool-2 - Shutdown completed. 
+2023-46-05-Stopping service [Tomcat] 
+2023-46-05-
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2023-46-05-Application run failed 
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChains' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'filterChain' defined in class path resource [com/code/config/SecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method hasRole(String) is undefined for the type ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:720) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at com.code.GoGrocersApplication.main(GoGrocersApplication.java:16) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'filterChain' defined in class path resource [com/code/config/SecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method hasRole(String) is undefined for the type ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1462) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:760) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method hasRole(String) is undefined for the type ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 41 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The method hasRole(String) is undefined for the type ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry
+
+	at com.code.config.SecurityConfig.filterChain(SecurityConfig.java:39) ~[classes/:na]
+	at com.code.config.SecurityConfig$$EnhancerBySpringCGLIB$$c252426d.CGLIB$filterChain$0(<generated>) ~[classes/:na]
+	at com.code.config.SecurityConfig$$EnhancerBySpringCGLIB$$c252426d$$FastClassBySpringCGLIB$$c3136837.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.25.jar:5.3.25]
+	at com.code.config.SecurityConfig$$EnhancerBySpringCGLIB$$c252426d.filterChain(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 42 common frames omitted
+2023-46-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 4724 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-46-05-No active profile set, falling back to 1 default profile: "default" 
+2023-46-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-46-05-Finished Spring Data repository scanning in 23 ms. Found 9 JPA repository interfaces. 
+2023-46-05-Tomcat initialized with port(s): 8080 (http) 
+2023-46-05-Starting service [Tomcat] 
+2023-46-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-46-05-Initializing Spring embedded WebApplicationContext 
+2023-46-05-Root WebApplicationContext: initialization completed in 327 ms 
+2023-46-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-46-05-HikariPool-3 - Starting... 
+2023-46-05-HikariPool-3 - Start completed. 
+2023-46-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-46-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-46-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-46-05-Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@53e7c477, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2fb395cd, org.springframework.security.web.context.SecurityContextPersistenceFilter@b1b1647, org.springframework.security.web.header.HeaderWriterFilter@178d5ea1, org.springframework.web.filter.CorsFilter@57b5a9c6, org.springframework.security.web.authentication.logout.LogoutFilter@79923ee5, com.code.filter.JwtFilter$$EnhancerBySpringCGLIB$$30dc4ed0@74473f07, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6910c0dd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1495f308, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@371275d6, org.springframework.security.web.session.SessionManagementFilter@17f526d5, org.springframework.security.web.access.ExceptionTranslationFilter@715f6bfa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2588a9f7] 
+2023-46-05-LiveReload server is running on port 35729 
+2023-46-05-Tomcat started on port(s): 8080 (http) with context path '' 
+2023-46-05-Started GoGrocersApplication in 1.197 seconds (JVM running for 964.536) 
+2023-46-05-Condition evaluation unchanged 
+2023-47-05-Application shutdown requested. 
+2023-47-05-Stopping service [Tomcat] 
+2023-47-05-The web application [ROOT] appears to have started a thread named [HikariPool-3 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.16/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.16/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.16/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.16/java.lang.Thread.run(Thread.java:834) 
+2023-47-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-47-05-HikariPool-3 - Shutdown initiated... 
+2023-47-05-HikariPool-3 - Shutdown completed. 
+2023-47-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 4240 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-47-05-No active profile set, falling back to 1 default profile: "default" 
+2023-47-05-Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2023-47-05-For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2023-47-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-47-05-Finished Spring Data repository scanning in 43 ms. Found 9 JPA repository interfaces. 
+2023-47-05-Tomcat initialized with port(s): 8080 (http) 
+2023-47-05-Starting service [Tomcat] 
+2023-47-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-47-05-Initializing Spring embedded WebApplicationContext 
+2023-47-05-Root WebApplicationContext: initialization completed in 1613 ms 
+2023-47-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-47-05-HHH000412: Hibernate ORM core version 5.6.14.Final 
+2023-47-05-HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2023-47-05-HikariPool-1 - Starting... 
+2023-47-05-HikariPool-1 - Start completed. 
+2023-47-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-47-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-47-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-47-05-Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2f8e6831, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14993a47, org.springframework.security.web.context.SecurityContextPersistenceFilter@16480688, org.springframework.security.web.header.HeaderWriterFilter@7aef6128, org.springframework.web.filter.CorsFilter@273a6fa7, org.springframework.security.web.authentication.logout.LogoutFilter@71b9bac9, com.code.filter.JwtFilter$$EnhancerBySpringCGLIB$$b22a2f4b@a5adb19, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e2184bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f82dfbc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@50f7050d, org.springframework.security.web.session.SessionManagementFilter@2ed3faad, org.springframework.security.web.access.ExceptionTranslationFilter@3fab7720, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@deedc44] 
+2023-47-05-LiveReload server is running on port 35729 
+2023-47-05-Tomcat started on port(s): 8080 (http) with context path '' 
+2023-47-05-Started GoGrocersApplication in 5.637 seconds (JVM running for 6.692) 
+2023-47-05-Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-47-05-Initializing Servlet 'dispatcherServlet' 
+2023-47-05-Completed initialization in 2 ms 
+2023-47-05-Init duration for springdoc-openapi is: 492 ms 
+2023-55-05-Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2023-55-05-Stopping service [Tomcat] 
+2023-55-05-Destroying Spring FrameworkServlet 'dispatcherServlet' 
+2023-55-05-The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.16/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.16/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.16/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.16/java.lang.Thread.run(Thread.java:834) 
+2023-55-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-55-05-HikariPool-1 - Shutdown initiated... 
+2023-55-05-HikariPool-1 - Shutdown completed. 
+2023-55-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 4240 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-55-05-No active profile set, falling back to 1 default profile: "default" 
+2023-55-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-55-05-Finished Spring Data repository scanning in 48 ms. Found 9 JPA repository interfaces. 
+2023-55-05-Tomcat initialized with port(s): 8080 (http) 
+2023-55-05-Starting service [Tomcat] 
+2023-55-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-55-05-Initializing Spring embedded WebApplicationContext 
+2023-55-05-Root WebApplicationContext: initialization completed in 400 ms 
+2023-55-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-55-05-HikariPool-2 - Starting... 
+2023-55-05-HikariPool-2 - Start completed. 
+2023-55-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-55-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-55-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-55-05-Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@351864d1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@be195ae, org.springframework.security.web.context.SecurityContextPersistenceFilter@21d763f4, org.springframework.security.web.header.HeaderWriterFilter@20e082c2, org.springframework.web.filter.CorsFilter@71d6a154, org.springframework.security.web.authentication.logout.LogoutFilter@d14e37c, com.code.filter.JwtFilter$$EnhancerBySpringCGLIB$$b22a2f4b@5f77b56, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@780e4ded, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5cdc36bc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54dc9e98, org.springframework.security.web.session.SessionManagementFilter@43e11612, org.springframework.security.web.access.ExceptionTranslationFilter@7a147299, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67d85ee8] 
+2023-55-05-LiveReload server is running on port 35729 
+2023-55-05-Tomcat started on port(s): 8080 (http) with context path '' 
+2023-55-05-Started GoGrocersApplication in 1.246 seconds (JVM running for 482.535) 
+2023-55-05-Condition evaluation unchanged 
+2023-55-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 13752 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-55-05-No active profile set, falling back to 1 default profile: "default" 
+2023-55-05-Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2023-55-05-For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2023-55-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-55-05-Finished Spring Data repository scanning in 43 ms. Found 9 JPA repository interfaces. 
+2023-55-05-Tomcat initialized with port(s): 8080 (http) 
+2023-55-05-Starting service [Tomcat] 
+2023-55-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-55-05-Initializing Spring embedded WebApplicationContext 
+2023-55-05-Root WebApplicationContext: initialization completed in 1419 ms 
+2023-55-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-55-05-HHH000412: Hibernate ORM core version 5.6.14.Final 
+2023-55-05-HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2023-55-05-HikariPool-1 - Starting... 
+2023-55-05-HikariPool-1 - Start completed. 
+2023-55-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-55-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-55-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-55-05-Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2357cb96, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78c8f01, org.springframework.security.web.context.SecurityContextPersistenceFilter@6316faef, org.springframework.security.web.header.HeaderWriterFilter@215fce73, org.springframework.web.filter.CorsFilter@44197b99, org.springframework.security.web.authentication.logout.LogoutFilter@5d7160e7, com.code.filter.JwtFilter$$EnhancerBySpringCGLIB$$6110b864@2f136b9d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42e0d110, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@616d5a5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6199258d, org.springframework.security.web.session.SessionManagementFilter@699fc124, org.springframework.security.web.access.ExceptionTranslationFilter@113c3d30, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5aadb413] 
+2023-55-05-Unable to start LiveReload server 
+2023-55-05-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use 
+2023-55-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-55-05-HikariPool-1 - Shutdown initiated... 
+2023-55-05-HikariPool-1 - Shutdown completed. 
+2023-55-05-Stopping service [Tomcat] 
+2023-55-05-
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2023-55-05-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+ 
+2023-55-05-Application shutdown requested. 
+2023-55-05-Stopping service [Tomcat] 
+2023-55-05-The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.16/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.16/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.16/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.16/java.lang.Thread.run(Thread.java:834) 
+2023-55-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-55-05-HikariPool-2 - Shutdown initiated... 
+2023-55-05-HikariPool-2 - Shutdown completed. 
+2023-55-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 17360 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-55-05-No active profile set, falling back to 1 default profile: "default" 
+2023-55-05-Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2023-55-05-For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2023-55-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-55-05-Finished Spring Data repository scanning in 54 ms. Found 9 JPA repository interfaces. 
+2023-55-05-Tomcat initialized with port(s): 8080 (http) 
+2023-55-05-Starting service [Tomcat] 
+2023-55-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-55-05-Initializing Spring embedded WebApplicationContext 
+2023-55-05-Root WebApplicationContext: initialization completed in 1472 ms 
+2023-55-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-55-05-HHH000412: Hibernate ORM core version 5.6.14.Final 
+2023-55-05-HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2023-55-05-HikariPool-1 - Starting... 
+2023-55-05-HikariPool-1 - Start completed. 
+2023-55-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-55-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-55-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-55-05-Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3b18c432, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14362b0b, org.springframework.security.web.context.SecurityContextPersistenceFilter@3696daf, org.springframework.security.web.header.HeaderWriterFilter@694ecb3b, org.springframework.web.filter.CorsFilter@4c462d22, org.springframework.security.web.authentication.logout.LogoutFilter@6cbfa10b, com.code.filter.JwtFilter$$EnhancerBySpringCGLIB$$97dce837@6de885ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a1cc835, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e585aca, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1152fc3e, org.springframework.security.web.session.SessionManagementFilter@45a37e02, org.springframework.security.web.access.ExceptionTranslationFilter@3a9cf87a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@557306e9] 
+2023-55-05-LiveReload server is running on port 35729 
+2023-55-05-Tomcat started on port(s): 8080 (http) with context path '' 
+2023-55-05-Started GoGrocersApplication in 5.155 seconds (JVM running for 6.125) 
+2023-55-05-Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-55-05-Initializing Servlet 'dispatcherServlet' 
+2023-55-05-Completed initialization in 1 ms 
+2023-55-05-Init duration for springdoc-openapi is: 339 ms 
+2023-58-05-Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2023-58-05-Stopping service [Tomcat] 
+2023-58-05-Destroying Spring FrameworkServlet 'dispatcherServlet' 
+2023-58-05-The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.16/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.16/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.16/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.16/java.lang.Thread.run(Thread.java:834) 
+2023-58-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-58-05-HikariPool-1 - Shutdown initiated... 
+2023-58-05-HikariPool-1 - Shutdown completed. 
+2023-58-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 17360 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-58-05-No active profile set, falling back to 1 default profile: "default" 
+2023-58-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-58-05-Finished Spring Data repository scanning in 18 ms. Found 9 JPA repository interfaces. 
+2023-58-05-Tomcat initialized with port(s): 8080 (http) 
+2023-58-05-Starting service [Tomcat] 
+2023-58-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-58-05-Initializing Spring embedded WebApplicationContext 
+2023-58-05-Root WebApplicationContext: initialization completed in 232 ms 
+2023-58-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-58-05-HikariPool-2 - Starting... 
+2023-58-05-HikariPool-2 - Start completed. 
+2023-58-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-58-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-58-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-58-05-Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2535f7c5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14c789de, org.springframework.security.web.context.SecurityContextPersistenceFilter@4476c6f4, org.springframework.security.web.header.HeaderWriterFilter@1dff3ee, org.springframework.web.filter.CorsFilter@5328423a, org.springframework.security.web.authentication.logout.LogoutFilter@3579bf3, com.code.filter.JwtFilter$$EnhancerBySpringCGLIB$$97dce837@bc6e3b4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c0e1f98, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72b0cd74, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46308ff0, org.springframework.security.web.session.SessionManagementFilter@2ca5fe59, org.springframework.security.web.access.ExceptionTranslationFilter@b786913, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@469a62e5] 
+2023-58-05-LiveReload server is running on port 35729 
+2023-58-05-Tomcat started on port(s): 8080 (http) with context path '' 
+2023-58-05-Started GoGrocersApplication in 1.078 seconds (JVM running for 209.068) 
+2023-58-05-Condition evaluation unchanged 
+2023-09-05-Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2023-09-05-Stopping service [Tomcat] 
+2023-09-05-The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.16/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.16/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.16/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.16/java.lang.Thread.run(Thread.java:834) 
+2023-09-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-09-05-HikariPool-2 - Shutdown initiated... 
+2023-09-05-HikariPool-2 - Shutdown completed. 
+2023-09-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 17360 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-09-05-No active profile set, falling back to 1 default profile: "default" 
+2023-09-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-09-05-Finished Spring Data repository scanning in 16 ms. Found 9 JPA repository interfaces. 
+2023-09-05-Tomcat initialized with port(s): 8080 (http) 
+2023-09-05-Starting service [Tomcat] 
+2023-09-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-09-05-Initializing Spring embedded WebApplicationContext 
+2023-09-05-Root WebApplicationContext: initialization completed in 235 ms 
+2023-09-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-09-05-HikariPool-3 - Starting... 
+2023-09-05-HikariPool-3 - Start completed. 
+2023-09-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-09-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-09-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-09-05-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productController' defined in file [E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes\com\code\controller\ProductController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error on tokens, delete these tokens
+ 
+2023-09-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-09-05-HikariPool-3 - Shutdown initiated... 
+2023-09-05-HikariPool-3 - Shutdown completed. 
+2023-09-05-Stopping service [Tomcat] 
+2023-09-05-
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2023-09-05-Application run failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productController' defined in file [E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes\com\code\controller\ProductController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error on tokens, delete these tokens
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at com.code.GoGrocersApplication.main(GoGrocersApplication.java:16) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error on tokens, delete these tokens
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error on tokens, delete these tokens
+
+	at com.code.controller.ProductController.<init>(ProductController.java:109) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 common frames omitted
+2023-12-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 17360 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-12-05-No active profile set, falling back to 1 default profile: "default" 
+2023-12-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-12-05-Finished Spring Data repository scanning in 20 ms. Found 9 JPA repository interfaces. 
+2023-12-05-Tomcat initialized with port(s): 8080 (http) 
+2023-12-05-Starting service [Tomcat] 
+2023-12-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-12-05-Initializing Spring embedded WebApplicationContext 
+2023-12-05-Root WebApplicationContext: initialization completed in 209 ms 
+2023-12-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-12-05-HikariPool-4 - Starting... 
+2023-12-05-HikariPool-4 - Start completed. 
+2023-12-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-12-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-12-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-12-05-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productController' defined in file [E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes\com\code\controller\ProductController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error on tokens, delete these tokens
+ 
+2023-12-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-12-05-HikariPool-4 - Shutdown initiated... 
+2023-12-05-HikariPool-4 - Shutdown completed. 
+2023-12-05-Stopping service [Tomcat] 
+2023-12-05-
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2023-12-05-Application run failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productController' defined in file [E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes\com\code\controller\ProductController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error on tokens, delete these tokens
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at com.code.GoGrocersApplication.main(GoGrocersApplication.java:16) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error on tokens, delete these tokens
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error on tokens, delete these tokens
+
+	at com.code.controller.ProductController.<init>(ProductController.java:109) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 common frames omitted
+2023-14-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 17360 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-14-05-No active profile set, falling back to 1 default profile: "default" 
+2023-14-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-14-05-Finished Spring Data repository scanning in 16 ms. Found 9 JPA repository interfaces. 
+2023-14-05-Tomcat initialized with port(s): 8080 (http) 
+2023-14-05-Starting service [Tomcat] 
+2023-14-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-14-05-Initializing Spring embedded WebApplicationContext 
+2023-14-05-Root WebApplicationContext: initialization completed in 198 ms 
+2023-14-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-14-05-HikariPool-5 - Starting... 
+2023-14-05-HikariPool-5 - Start completed. 
+2023-14-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-14-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-14-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-14-05-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productController' defined in file [E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes\com\code\controller\ProductController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error on tokens, delete these tokens
+ 
+2023-14-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-14-05-HikariPool-5 - Shutdown initiated... 
+2023-14-05-HikariPool-5 - Shutdown completed. 
+2023-14-05-Stopping service [Tomcat] 
+2023-14-05-
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2023-14-05-Application run failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productController' defined in file [E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes\com\code\controller\ProductController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error on tokens, delete these tokens
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at com.code.GoGrocersApplication.main(GoGrocersApplication.java:16) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error on tokens, delete these tokens
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error on tokens, delete these tokens
+
+	at com.code.controller.ProductController.<init>(ProductController.java:109) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 common frames omitted
+2023-15-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 17360 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-15-05-No active profile set, falling back to 1 default profile: "default" 
+2023-15-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-15-05-Finished Spring Data repository scanning in 15 ms. Found 9 JPA repository interfaces. 
+2023-15-05-Tomcat initialized with port(s): 8080 (http) 
+2023-15-05-Starting service [Tomcat] 
+2023-15-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-15-05-Initializing Spring embedded WebApplicationContext 
+2023-15-05-Root WebApplicationContext: initialization completed in 178 ms 
+2023-15-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-15-05-HikariPool-6 - Starting... 
+2023-15-05-HikariPool-6 - Start completed. 
+2023-15-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-15-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-15-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-15-05-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productController' defined in file [E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes\com\code\controller\ProductController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	newProduct cannot be resolved
+ 
+2023-15-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-15-05-HikariPool-6 - Shutdown initiated... 
+2023-15-05-HikariPool-6 - Shutdown completed. 
+2023-15-05-Stopping service [Tomcat] 
+2023-15-05-
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2023-15-05-Application run failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productController' defined in file [E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes\com\code\controller\ProductController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	newProduct cannot be resolved
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at com.code.GoGrocersApplication.main(GoGrocersApplication.java:16) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	newProduct cannot be resolved
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert ")" to complete MethodDeclaration
+	newProduct cannot be resolved
+
+	at com.code.controller.ProductController.<init>(ProductController.java:107) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 common frames omitted
+2023-15-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 17360 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-15-05-No active profile set, falling back to 1 default profile: "default" 
+2023-15-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-15-05-Finished Spring Data repository scanning in 16 ms. Found 9 JPA repository interfaces. 
+2023-15-05-Tomcat initialized with port(s): 8080 (http) 
+2023-15-05-Starting service [Tomcat] 
+2023-15-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-15-05-Initializing Spring embedded WebApplicationContext 
+2023-15-05-Root WebApplicationContext: initialization completed in 236 ms 
+2023-15-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-15-05-HikariPool-7 - Starting... 
+2023-15-05-HikariPool-7 - Start completed. 
+2023-15-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-15-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-15-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-15-05-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productController' defined in file [E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes\com\code\controller\ProductController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	Syntax error, insert ")" to complete MethodDeclaration
+ 
+2023-15-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-15-05-HikariPool-7 - Shutdown initiated... 
+2023-15-05-HikariPool-7 - Shutdown completed. 
+2023-15-05-Stopping service [Tomcat] 
+2023-15-05-
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2023-15-05-Application run failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productController' defined in file [E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes\com\code\controller\ProductController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	Syntax error, insert ")" to complete MethodDeclaration
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at com.code.GoGrocersApplication.main(GoGrocersApplication.java:16) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.code.controller.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	Syntax error, insert ")" to complete MethodDeclaration
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	Syntax error, insert ")" to complete MethodDeclaration
+
+	at com.code.controller.ProductController.<init>(ProductController.java:107) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 common frames omitted
+2023-15-05-Starting GoGrocersApplication using Java 11.0.16 on DESKTOP-OR60IC2 with PID 17360 (E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers\target\classes started by Komal Ghorpade in E:\CDAC PROJECT\CDAC-Project-Go-Grocers\2_BackEnd\GoGrocers) 
+2023-15-05-No active profile set, falling back to 1 default profile: "default" 
+2023-15-05-Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-15-05-Finished Spring Data repository scanning in 17 ms. Found 9 JPA repository interfaces. 
+2023-15-05-Tomcat initialized with port(s): 8080 (http) 
+2023-15-05-Starting service [Tomcat] 
+2023-15-05-Starting Servlet engine: [Apache Tomcat/9.0.71] 
+2023-15-05-Initializing Spring embedded WebApplicationContext 
+2023-15-05-Root WebApplicationContext: initialization completed in 243 ms 
+2023-15-05-HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-15-05-HikariPool-8 - Starting... 
+2023-15-05-HikariPool-8 - Start completed. 
+2023-15-05-HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-15-05-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-15-05-Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-15-05-Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@341a05c1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76a335b7, org.springframework.security.web.context.SecurityContextPersistenceFilter@74658bf5, org.springframework.security.web.header.HeaderWriterFilter@61434322, org.springframework.web.filter.CorsFilter@50c209e7, org.springframework.security.web.authentication.logout.LogoutFilter@3da991f1, com.code.filter.JwtFilter$$EnhancerBySpringCGLIB$$97dce837@3a0efedc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b0ea19b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@702fa98b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d70fb39, org.springframework.security.web.session.SessionManagementFilter@2b67d2c2, org.springframework.security.web.access.ExceptionTranslationFilter@4beaecc8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3ee26fa1] 
+2023-15-05-LiveReload server is running on port 35729 
+2023-15-05-Tomcat started on port(s): 8080 (http) with context path '' 
+2023-15-05-Started GoGrocersApplication in 0.989 seconds (JVM running for 1223.161) 
+2023-15-05-Condition evaluation unchanged 
+2023-16-05-Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-16-05-Initializing Servlet 'dispatcherServlet' 
+2023-16-05-Completed initialization in 2 ms 
+2023-16-05-Init duration for springdoc-openapi is: 188 ms 
+2023-19-05-Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level. 
+java.lang.IllegalArgumentException: Invalid character found in the request target [/product/edit?product[name]=Wheat&product[description]=DailyFood&product[price]=50&product[imageName]=string&product[status]=ACTIVE&category=Grains&stock[quantity]=100&stock[unit]=string&stock[currentProduct][name]=Wheat&stock[currentProduct][description]=DailyFood&stock[currentProduct][price]=0&stock[currentProduct][imageName]=string&stock[currentProduct][status]=ACTIVE ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:494) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+2023-56-05-HikariPool-8 - Thread starvation or clock leap detected (housekeeper delta=2h47m6s551ms219µs100ns). 
+2023-57-05-Application shutdown requested. 
+2023-57-05-Failed to unlock acceptor for [http-nio-8080] because the local address was not available 
+2023-57-05-Stopping service [Tomcat] 
+2023-57-05-Destroying Spring FrameworkServlet 'dispatcherServlet' 
+2023-57-05-Socket accept failed 
+java.nio.channels.AsynchronousCloseException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:269) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:288) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:547) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+2023-57-05-The web application [ROOT] appears to have started a thread named [HikariPool-8 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.16/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.16/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.16/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.16/java.lang.Thread.run(Thread.java:834) 
+2023-57-05-Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-57-05-HikariPool-8 - Shutdown initiated... 
+2023-57-05-HikariPool-8 - Shutdown completed. 

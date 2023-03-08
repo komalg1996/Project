@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -48,17 +49,17 @@ public class ProductController {
 	private CategoryService catService;
 
 	@PostMapping("/add-product")
-	public ResponseEntity<?> addNewProduct(@RequestParam String productDto,
-			@RequestParam(required = false) MultipartFile image) {
+	public ResponseEntity<?> addNewProduct(@RequestBody ProductDto productDto){
+//			@RequestParam(required = false) MultipartFile image) {
 		String message = "";
 		try {
-			ProductDto productDetails = new ObjectMapper().readValue(productDto, ProductDto.class);
+			//ProductDto productDetails = new ObjectMapper().readValue(productDto, ProductDto.class);
 
-			if (image != null) {
-				image.transferTo(new File(location, image.getOriginalFilename()));
-				productDetails.getProduct().setImageName(image.getOriginalFilename());
-			}
-			message = prodService.addProduct(productDetails);
+//			if (image != null) {
+//				image.transferTo(new File(location, image.getOriginalFilename()));
+//				productDetails.getProduct().setImageName(image.getOriginalFilename());
+//			}
+			message = prodService.addProduct(productDto);
 		} catch (Exception e) {
 			message = "error";
 			e.printStackTrace();
@@ -103,19 +104,20 @@ public class ProductController {
 
 	// edit product
 	@PutMapping("/edit")
-	public ResponseEntity<?> editProduct(@RequestParam String productDto,
-			@RequestParam(required = false) MultipartFile image) {
+	public ResponseEntity<?> editProduct(@RequestParam ProductDto productDto){
+			//@RequestParam(required = false) MultipartFile image) {
 		String message = "";
 		try {
-			ProductDto productDetails = new ObjectMapper().readValue(productDto, ProductDto.class);
-
-			if (image != null) {
-				image.transferTo(new File(location, image.getOriginalFilename()));
-				productDetails.getProduct().setImageName(image.getOriginalFilename());
-			}
-			ProductDto newProduct = prodService.editProduct(productDetails);
-			// System.out.println("Product Details: "+productDetails);
-			message = newProduct.getProduct().getName() + " edited successfully";
+//			ProductDto productDetails = new ObjectMapper().readValue(productDto, ProductDto.class);
+//
+//			if (image != null) {
+//				image.transferTo(new File(location, image.getOriginalFilename()));
+//				productDetails.getProduct().setImageName(image.getOriginalFilename());
+//			}
+//			ProductDto newProduct = prodService.editProduct(productDetails);
+//			// System.out.println("Product Details: "+productDetails);
+			message = productDto.getProduct().getName() + " edited successfully";
+			
 		} catch (Exception e) {
 			message = "error";
 			e.printStackTrace();
