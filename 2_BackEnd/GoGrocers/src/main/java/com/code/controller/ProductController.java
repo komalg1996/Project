@@ -53,7 +53,7 @@ public class ProductController {
 
 	@PostMapping("/add-product")
 	public ResponseEntity<?> addNewProduct(@RequestParam String productDto,
-			@RequestParam(required = false) MultipartFile image) {
+			@RequestParam(required = true) MultipartFile image) {
 		System.out.println("data " + productDto + " " + image.getOriginalFilename() + " " + location);
 		String message = "";
 		try {

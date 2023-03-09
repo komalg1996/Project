@@ -1,38 +1,293 @@
-.App {
-  text-align: center;
+.Screen {
+  margin: auto;
+  margin-top: 5px;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Block {
+  border-right: 1px solid black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.footer {
+  background-color: black;
+  padding: 10px;
   color: white;
+  text-align: center;
+  margin-top: 5px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.myNav {
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-overflow {
+  overflow: auto;
+}
+
+.NextBtn {
+  margin-left: 10px;
+}
+
+.pallette{
+  border-collapse: collapse;
+  cursor: pointer;
+}
+
+.productImage{
+  width: 74%;
+}
+
+.myCardElement{
+  margin-top: 1em;
+  padding: 15px;
+  box-shadow: black;
+  cursor: pointer;
+}
+
+.order-card{
+  padding: 15px;
+  box-shadow: black;
+  cursor: pointer;
+}
+
+.card:hover{
+  background-color: #fff3dd;
+}
+
+.card-title{
+  margin-top: 1em;
+}
+
+.addCard:hover{
+  color: rgb(66, 151, 248);
+}
+
+.stockData{
+  font-weight: bold;
+  padding: 5px;
+}
+
+.img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.vertical-aligner{
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.productHolder{
+  width: 300px;
+  height: 300px;
+  min-height: 300px;
+  max-height: 300px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: block;
+  overflow: hidden;
+}
+
+.right-space{
+  padding-right: 40px;
+}
+
+.cartArea{
+  cursor: pointer;
+}
+
+.cartCount{
+  font-weight: bold;
+  position: relative;
+  left: -19px;
+  color: lightyellow; 
+  cursor: pointer;
+}
+
+.cat-card-title{
+  font: 25px/1.5   "Gill Sans", sans-serif;
+}
+
+.block-card{
+  cursor: not-allowed;
+  background-color:#dddddd;
+}
+
+.overlay{
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+
+  background-color: rgba(100,100,100,0.4);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: 0.5s;
+
+}
+
+.overlay-content{
+  width: 100%;
+}
+
+.cart-title{  
+  color: white;
+  display: block;
+}
+
+.cart-area{
+  background-color: white;
+  height: 100%;
+  display: block;
+  padding: 15px;
+  overflow: scroll;
+}
+
+.bi{
+  cursor: pointer;
+}
+
+.closeBtn{
+  margin-top: 4px ;
+  margin-bottom: 4px ;
+  text-decoration-color: white;
+  background-color: currentColor;
+}
+.closeBtn:hover{
+  cursor: pointer;
+}
+
+.check-out{
+  position: relative;
+  bottom: 15%;
+  width: 100%;
+}
+
+.full-height{
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.check-out-btn{
+  width: 80%;
+  font-weight: bold;
+}
+
+.cart-item{
+  background-color: ghostwhite;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.cart-item td{
+  vertical-align: middle;
+  text-align: left;
+}
+
+.price-block {
+  padding-right: 20px;
+}
+
+.parent-block{
+  position: relative;
+}
+
+#order-action-block{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  bottom: 3px;
+}
+
+.radio-card-block{
+  text-align: center;
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+}
+
+.order-top{
+  border: 1px solid black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #efefef;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.order-details{
+  border: 1px solid rgb(150, 150, 150);
+  border-top: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.order-image{
+  width: 100px;
+  height: 100px;
+  min-height: 150px;
+  max-height: 150px;
+  
+  margin-left: auto;
+  margin-right: auto;
+
+  display: block;
+  overflow: hidden;
+}
+
+.assign-btn{
+  margin-top: 4px;
+}
+
+.delivery-order-area{
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 5px;
+  padding-inline: 25px;
+}
+
+.order-product-area{
+margin: auto;
+margin-top: 5px;
+}
+
+.order-product-detail{
+  padding: 15px;
+  padding-top: 2vw;
+}
+
+.order-product-price{
+  margin-top: 10px;
+  padding: 15px;
+  padding-top: 2vw;
+}
+
+@media only screen and (max-width:768px){
+ .Block{
+   border: none;
+ } 
+ 
+ .order-image{
+
+  width: 200px;
+  height: 200px;
+  min-height: 250px;
+  max-height: 200px;
+  
+  margin-left: auto;
+  margin-right: auto;
+
+  display: block;
+  overflow: hidden;
+ }
+
 }

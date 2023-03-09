@@ -1,0 +1,1 @@
+export const PRODUCT_EDIT = "PRODUCT_EDIT"
