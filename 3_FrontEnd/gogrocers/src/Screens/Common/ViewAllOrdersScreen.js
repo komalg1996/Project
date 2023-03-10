@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
@@ -10,8 +9,6 @@ import { URL_PATH } from '../../Constants/Url'
 const ViewAllOrdersScreen = (props) => {
     const url_fetch_orders = URL_PATH+"/order/all"
     const url_assign_order = URL_PATH+"/order/update"
-    //const url_image = URL_PATH+"/product/image"
-  //  const url_image = "http://127.0.0.1:8887/src/Images"
     const role = useSelector(store=>store.userSignIn.response.data.role)
 
     const header = {
@@ -80,7 +77,7 @@ const ViewAllOrdersScreen = (props) => {
                                                             <span className="vertical-aligner"></span>
                                                             {
                                                                 detail.selectedProduct.imageName &&
-                                                                <img src={`Images` + `/${detail.selectedProduct.imageName}`} alt="product" className="img-fluid img-thumbnail"/>
+                                                                <img src={`Img` + `/${detail.selectedProduct.imageName}`} alt="product" className="img-fluid img-thumbnail"/>
                                                             }
                                                             {
                                                                 !detail.selectedProduct.imageName &&

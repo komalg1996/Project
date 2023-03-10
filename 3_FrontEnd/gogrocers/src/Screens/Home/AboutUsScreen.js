@@ -57,7 +57,7 @@ const AboutUsScreen = (props) => {
             <p>
             We’ve taken away all the stress associated with shopping for daily essentials, and you can now order all your groceries online without travelling long distances or standing in serpentine queues. <br/>
             Add to this the convenience of finding all your requirements at one single source, along with great savings, and you will realize that Grocers- a online supermarket, will revolutionize the way India shops for groceries. <br/>
-            Online grocery shopping has never been easier. Need things fresh? Whether it’s fruits and vegetables or dairy and meat, we have this covered as well! Get fresh fruits, vegetables, sdiary products and more online at your convenience.
+            Online grocery shopping has never been easier. Need things fresh? Whether it’s fruits and vegetables or dairy and other eatables, we have this covered as well! Get fresh fruits, vegetables, sdiary products and more online at your convenience.
             </p>
           </div> */}
 

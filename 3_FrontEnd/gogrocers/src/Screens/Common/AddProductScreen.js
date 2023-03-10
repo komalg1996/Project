@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
@@ -26,12 +25,8 @@ const AddProductScreen = (props) => {
     const [price,setPrice] = useState("")
     const [category,setCategory] = useState("")
     const [quantity,setQuantity] = useState(5)
-   // const [unit,setUnit] = useState("")
     const [imageFile,setImageFile] = useState(AddProduct)
     const [image,setImage] = useState(null)
-
-  //  const units = ["gm","kg","pc","pkt","ml","lit","dozen"]
-
     const onFileSelect =(file) => {
         setImageFile(URL.createObjectURL(file))
         setImage(file)
@@ -59,7 +54,6 @@ const AddProductScreen = (props) => {
             category,
             stock : {
                 quantity,
-               // unit
             }
         }
 
@@ -139,21 +133,7 @@ const AddProductScreen = (props) => {
                                     <label className="form-label">Price: </label>
                                     <input onChange={(e)=> setPrice(e.target.value)} type="number" className="NextBtn" placeholder="Rs.125" />
                                 </div>                            
-                                 {/* <div className="mb-3">
-                                    <label className="form-label">Unit:  </label>
-                                    {
-                                        <select className="NextBtn" onChange={(e)=> setUnit(e.target.value)}>
-                                            <option disabled selected>Choose Unit</option>
-                                        {
-                                            units.map(u =>{
-                                            return(
-                                                <option>{u}</option>
-                                                )
-                                            })
-                                        }   
-                                        </select>
-                                    }
-                                </div> */}
+                
                             </div>
                         </div>
                             

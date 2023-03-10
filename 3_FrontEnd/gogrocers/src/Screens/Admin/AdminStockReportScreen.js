@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Header from '../../Components/Header'
@@ -83,7 +82,6 @@ const AdminStockReportScreen = (props) => {
                                     <th className="text-center">Product ID</th>
                                     <th>Product Name</th>
                                     <th className="text-center">Product Stock</th>
-                                    {/* <th className="text-center">Units</th> */}
                                 </tr>
                             </thead>
                             <tbody>
@@ -95,7 +93,6 @@ const AdminStockReportScreen = (props) => {
                                             <td className="text-center">{detail.product.id}</td>
                                             <td>{detail.product.name}</td>
                                             <td className="text-center">{detail.stock.quantity}</td>
-                                            {/* <td className="text-center">{detail.stock.unit}</td> */}
                                         </tr>
                                     )
                                 })

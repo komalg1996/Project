@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Header from "../../Components/Header";
+
+
 const DeliveryHomeScreen = (props) => {
   const userSignIn = useSelector((store) => store.userSignIn);
   return (
@@ -10,7 +12,7 @@ const DeliveryHomeScreen = (props) => {
         <Header title={"Welcome " + userSignIn.response.data.firstName} />
       )}
       <img
-       src={`Images` + `/About.jpg`}
+       src={`Img` + `/About.jpg`}
        height="500px"
        width="1250px"
        />

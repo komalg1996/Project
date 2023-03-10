@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
@@ -13,7 +12,6 @@ const EditProductScreen = (props) => {
     
     const url_category = URL_PATH+"/category/all"
     const url_product_edit = URL_PATH+"/product/edit"
-    //const url_image = URL_PATH+"/product/image"
     const url_image = "http://127.0.0.1:8887/src/Images"
     const header = {
         headers: {
@@ -32,8 +30,6 @@ const EditProductScreen = (props) => {
     const [imageFile,setImageFile] = useState((productDetail.product.imageName && `Images` + `/${productDetail.product.imageName}` )|| AddProduct)
     const [image,setImage] = useState(null)
     
-  //  const units = ["gm","kg","pc","pkt","ml","lit","dozen"]
-
     const onFileUpload =(file) => {
         setImage(file)
         setImageFile(URL.createObjectURL(file))
@@ -146,21 +142,6 @@ const EditProductScreen = (props) => {
                                     <input defaultValue={productDetail.product.price} onChange={(e)=> setPrice(e.target.value)} type="number" className="NextBtn" placeholder="Rs.125" />
                                 </div>
                                 
-                                {/* <div className="mb-3">
-                                    <label className="form-label">Unit:  </label>
-                                    {
-                                        <select className="NextBtn" onChange={(e)=> setUnit(e.target.value)}>
-                                            <option disabled selected>Choose Unit</option>
-                                            {
-                                                units.map(u =>{
-                                                    return(
-                                                        <option>{u}</option>
-                                                    )
-                                                })
-                                            }   
-                                        </select>
-                                    }
-                                </div> */}
                             </div>
                         </div>
                             

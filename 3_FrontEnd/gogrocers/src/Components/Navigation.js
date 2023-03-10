@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -158,12 +157,7 @@ const Navigation = (props) => {
                                 <li><Link className="dropdown-item" to="/addresses"> My Address </Link></li>
                             </ul>
                         </li>
-                        {/* <li className="nav-item">
-                            <Link className="nav-link" to="/edit-profile"> Profile </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/addresses"> My Addresses </Link>
-                        </li> */}
+                     
                         <li className="nav-item">
                             <Link className="nav-link" to="/my-orders"> My Orders </Link>
                         </li>

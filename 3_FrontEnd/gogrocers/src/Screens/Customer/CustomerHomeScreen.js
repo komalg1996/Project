@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,7 +5,7 @@ import Header from "../../Components/Header";
 import { CATEGORY_LIST_FETCH, CATEGORY_SELECT } from "../../Constants/categoryConstants";
 import { toast } from "react-toastify"
 import { URL_PATH } from "../../Constants/Url";
-
+import img from '../../Images/About.jpg'
  
 const CustomerHomeScreen = (props) => {
   const userSignIn = useSelector((store) => store.userSignIn);
@@ -80,7 +79,7 @@ const CustomerHomeScreen = (props) => {
           <div>
             <Header title="You are not logged in" />
             <img
-              src={`Images` + `/About.jpg`}
+              src={img}
               height="500px"
               width="1100px"
             />
@@ -121,7 +120,7 @@ const CustomerHomeScreen = (props) => {
                 })
               }
               <img
-                src={`Images` + `/About.jpg`}
+                src={img}
                 height="500px"
                 width="1100px"
               />

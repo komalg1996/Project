@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Header from '../../Components/Header'
@@ -11,8 +10,6 @@ const CustomerOrdersScreen = (props) => {
 
     const url_fetch_orders = URL_PATH+"/order/customer/all"
     const url_cart_fetch = URL_PATH+"/cart/all"
-   //const url_image = URL_PATH+"/product/image"
-//const url_image = "http://127.0.0.1:8887/src/Images"
     const header = {
         headers:{
             "Content-Type" : "application/json",
@@ -74,7 +71,7 @@ const CustomerOrdersScreen = (props) => {
                                                             <span className="vertical-aligner"></span>
                                                             {
                                                                 detail.selectedProduct.imageName &&
-                                                                <img src={`Images` + `/${detail.selectedProduct.imageName}`} alt="product" className="img-fluid img-thumbnail"/>
+                                                                <img src={`Img` + `/${detail.selectedProduct.imageName}`} alt="product" className="img-fluid img-thumbnail"/>
                                                             }
                                                             {
                                                                 !detail.selectedProduct.imageName &&

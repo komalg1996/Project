@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -20,8 +19,6 @@ const CustomerProductsScreen = (props) => {
     const url_cart_add = URL_PATH+"/cart/add"
     const url_cart_fetch = URL_PATH+"/cart/all"
     const url_cart_remove = URL_PATH+"/cart/delete"
-  //  const url_image = URL_PATH+"/product/image"
-  //  const url_image = "../../Images"
     const url_category = URL_PATH+"/category/all"
     
     const header = {
@@ -185,7 +182,7 @@ const CustomerProductsScreen = (props) => {
                                                 <div className="card-body text-center">
                                                 {
                                                     product.imageName &&
-                                                    <img src={`Images` + `/${product.imageName}`} alt="product" className="img-fluid productImage"/>
+                                                    <img src={`Img` + `/${product.imageName}`} alt="product" className="img-fluid productImage"/>
                                                 }
                                                 {
                                                     !product.imageName &&
@@ -219,9 +216,7 @@ const CustomerProductsScreen = (props) => {
                             {
                                 !products.length>0 &&
                                 <div >
-                                    {/* <h4 className="text-center">Please Login to proceed</h4> */}
                                     <Scrolling />
-                                    {/* <span className="vertical-aligner"></span> */}
                                     <h4 className="text-center">Please Login to proceed</h4>
                                 </div>
                             }  

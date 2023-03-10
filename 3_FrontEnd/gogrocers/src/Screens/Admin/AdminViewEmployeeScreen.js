@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
@@ -59,7 +58,6 @@ const AdminViewEmployeeScreen = (props) => {
                             <table className="table table-striped table-hover">
                                 <thead>
                                     <tr>
-                                        {/* <td className="text-left"> {employee.id} </td> */}
                                         <td className="text-left"> Name </td>
                                         <td className="text-left">email </td>
                                         <td className="text-left">phone</td>
@@ -71,7 +69,6 @@ const AdminViewEmployeeScreen = (props) => {
                                         employeeList && employeeList.map(employee => {
                                             return (
                                                 <tr>
-                                                    {/* <td className="text-left"> {employee.id} </td> */}
                                                     <td className="text-left"> {employee.firstName} </td>
                                                     <td className="text-left"> {employee.email} </td>
                                                     <td className="text-left"> {employee.phone || "Not Provided"} </td>
@@ -89,7 +86,6 @@ const AdminViewEmployeeScreen = (props) => {
                             <table className="table table-striped table-hover">
                             <thead>
                                     <tr>
-                                        {/* <td className="text-left"> {employee.id} </td> */}
                                         <td className="text-left"> Name </td>
                                         <td className="text-left">email </td>
                                         <td className="text-left">phone</td>
@@ -102,7 +98,6 @@ const AdminViewEmployeeScreen = (props) => {
                                         deliveryList && deliveryList.map(delivery => {
                                             return (
                                                 <tr>
-                                                    {/* <td className="text-left"> {delivery.id} </td> */}
                                                     <td className="text-left"> {delivery.firstName} </td>
                                                     <td className="text-left"> {delivery.email} </td>
                                                     <td className="text-left"> {delivery.phone || "Not Provided"} </td>

@@ -12,8 +12,6 @@ const ViewAssignedOrdersScreen = (props) => {
 
     const url_fetch_orders = URL_PATH+"/order/assigned"
     const url_change_status = URL_PATH+"/order/update-status"
-    //const url_image = URL_PATH+"/product/image"
-  //  const url_image = "http://127.0.0.1:8887/src/Images"
     const role = useSelector(store=>store.userSignIn.response.data.role)
 
     const header = {
@@ -83,7 +81,7 @@ const ViewAssignedOrdersScreen = (props) => {
                                                             <span className="vertical-aligner"></span>
                                                             {
                                                                 detail.selectedProduct.imageName &&
-                                                                <img src={`Images` + `/${detail.selectedProduct.imageName}`} alt="product" className="img-fluid img-thumbnail"/>
+                                                                <img src={`Img` + `/${detail.selectedProduct.imageName}`} alt="product" className="img-fluid img-thumbnail"/>
                                                             }
                                                             {
                                                                 !detail.selectedProduct.imageName &&
